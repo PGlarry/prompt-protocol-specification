@@ -15,6 +15,19 @@
 
 ---
 
+<div align="center">
+
+### 立即体验 · 阅读书籍 · 探索规范
+
+| | |
+|---|---|
+| **5W3H 平台** | [https://www.lateni.com](https://www.lateni.com) — 在线设计您的 PPS 信封，即时体验结构化提示词 |
+| **书籍** | [*Super Prompt: 5W3H — 跨领域 AI 提示词设计全指南*](https://www.amazon.com/dp/B0F3Z25CHC)<br>彭刚 著 · Amazon KDP · 2025年4月 · ASIN: B0F3Z25CHC |
+
+</div>
+
+---
+
 ## 什么是 PPS？
 
 自然语言提示词存在**意图传递损耗**——用户的真实需求与实际传达给 AI 的内容之间存在系统性偏差。PPS（提示词协议规范）通过提供结构化、机器可验证的指令信封来解决这一问题。
@@ -70,7 +83,8 @@ prompt-protocol-specification/
 ├── spec/
 │   └── PPS-1.0/
 │       ├── standard.md          # 规范性规范文本（中文）
-│       ├── standard.en.md       # 规范性规范文本（英文）  [即将发布]
+│       ├── standard.en.md       # 规范性规范文本（英文）
+│       ├── standard.ja.md       # 规范性规范文本（日文）
 │       ├── best-practices.md    # 实现最佳实践
 │       ├── conformance.md       # 符合性级别
 │       ├── security-privacy.md  # 安全与隐私要求
@@ -143,8 +157,9 @@ PPS 定义三种符合性级别，在 `header.compliance` 中声明：
 
 ## 相关资源
 
-- **5W3H 平台**：[https://www.lateni.com](https://www.lateni.com) — 生产环境实现
-- **书籍**：*Super Prompt: 5W3H*（Amazon KDP，2025年4月）——实践指南
+- **5W3H 平台**：[https://www.lateni.com](https://www.lateni.com) — 在线设计您的 PPS 信封，即时体验结构化提示词
+- **书籍**：[*Super Prompt: 5W3H — 跨领域 AI 提示词设计全指南*](https://www.amazon.com/dp/B0F3Z25CHC)
+  彭刚 著 · Amazon KDP · 2025年4月 · ASIN: B0F3Z25CHC
 
 ---
 

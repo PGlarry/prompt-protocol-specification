@@ -15,6 +15,19 @@
 
 ---
 
+<div align="center">
+
+### Try It · Read the Book · Explore the Spec
+
+| | |
+|---|---|
+| **5W3H Platform** | [https://www.lateni.com](https://www.lateni.com) — live implementation, design your PPS envelopes online |
+| **Book** | [*Super Prompt: 5W3H — A Comprehensive Guide to Designing Effective AI Prompts Across Domains*](https://www.amazon.com/dp/B0F3Z25CHC)<br>Gang Peng · Amazon KDP · April 2025 · ASIN: B0F3Z25CHC |
+
+</div>
+
+---
+
 ## What is PPS?
 
 Natural language prompts suffer from **intent transmission loss** — the gap between what users actually need and what they communicate to AI systems. PPS (Prompt Protocol Specification) solves this by providing a structured, machine-verifiable envelope for AI instructions.
@@ -70,7 +83,8 @@ prompt-protocol-specification/
 ├── spec/
 │   └── PPS-1.0/
 │       ├── standard.md          # Normative specification (Chinese)
-│       ├── standard.en.md       # Normative specification (English)  [coming]
+│       ├── standard.en.md       # Normative specification (English)
+│       ├── standard.ja.md       # Normative specification (Japanese)
 │       ├── best-practices.md    # Implementation guidance
 │       ├── conformance.md       # Conformance levels
 │       ├── security-privacy.md  # Security & GDPR requirements
@@ -143,8 +157,9 @@ If you use PPS in academic work, please cite:
 
 ## Related
 
-- **5W3H Platform**: [https://www.lateni.com](https://www.lateni.com) — live implementation
-- **Book**: *Super Prompt: 5W3H* (Amazon KDP, April 2025) — practitioner guide
+- **5W3H Platform**: [https://www.lateni.com](https://www.lateni.com) — live implementation, design your PPS envelopes online
+- **Book**: [*Super Prompt: 5W3H — A Comprehensive Guide to Designing Effective AI Prompts Across Domains*](https://www.amazon.com/dp/B0F3Z25CHC)
+  Gang Peng · Amazon KDP · April 2025 · ASIN: B0F3Z25CHC
 
 ---
 

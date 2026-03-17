@@ -2,6 +2,11 @@
 title: Prompt Protocol Specification (PPS) v1.0 — Normative Specification
 status: community-specification
 version: 1.0.0
+lang: zh
+---
+
+**语言 / Language / 言語**：[中文](standard.md) · [English](standard.en.md) · [日本語](standard.ja.md)
+
 ---
 
 ## 目录（Table of Contents）
