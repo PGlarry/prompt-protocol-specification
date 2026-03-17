@@ -1,0 +1,59 @@
+{
+  "header": {
+    "pps_version": "PPS-v1.0.0",
+    "model": {
+      "name": "gpt-X",
+      "digest": "sha256-EXAMPLE",
+      "data_cutoff": "2024-01-01"
+    },
+    "decode": {
+      "seed": 8,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "locale": "zh-CN",
+    "compliance": [
+      "gdpr"
+    ]
+  },
+  "body": {
+    "what": {
+      "task": "根据用户反馈生成改进建议"
+    },
+    "why": {
+      "goals": [
+        "减少负面反馈"
+      ],
+      "constraints": []
+    },
+    "who": {
+      "persona": "产品分析师",
+      "policy": [
+        "no_pii"
+      ]
+    },
+    "when": {
+      "timeframe": "本月"
+    },
+    "where": {
+      "environment": "prod",
+      "evidence": []
+    },
+    "how_to_do": {
+        "paradigm": "CoT",
+        "steps": [
+          "阅读",
+          "总结"
+        ]
+      },
+    "how_much": {
+        "content_length": "要点简述（200-300字）" 
+      },
+    "how_feel": {
+        "tone": "专业"
+      }
+  },
+  "integrity": {
+    "canonical_hash": "sha256:5GN7tLEMe3qqATufTy3gWcGAFfeQjHYD8cp0BAEDHyc"
+  }
+}

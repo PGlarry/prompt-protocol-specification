@@ -1,0 +1,22 @@
+{
+  "header": {
+    "pps_version": "PPS-v1.0.0",
+    "model": {"name": "gpt-X", "digest": "sha256-EXAMPLE", "data_cutoff": "2024-01-01"},
+    "decode": {"seed": 0, "temperature": 0, "top_p": 1},
+    "locale": "zh-CN"
+  },
+  "body": {
+    "what": {"task": "总结提供的要点为200字以内中文摘要"},
+    "why": {"goals": ["信息压缩", "保持关键事实"], "constraints": ["禁止虚构", "保留时间/数字"]},
+    "who": {"persona": "中文科技编辑"},
+    "when": {"timeframe": "当前会话"},
+    "where": {"environment": "local", "evidence": []},
+    "how_to_do": {"paradigm": "CoT", "steps": ["阅读材料", "提取关键信息", "生成摘要", "复核输出"]},
+    "how_much": {"content_length": "≤200字", "detail_richness": "关键事实"},
+    "how_feel": {"tone": "客观", "style": "简练"},
+    "how_meta": {"governance": {"locks": ["/body/how_much/content_length", "/body/what/task"]}}
+  },
+  "integrity": {"canonical_hash": "sha256:TO_BE_RECALC"}
+}
+
+

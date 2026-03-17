@@ -1,0 +1,127 @@
+{
+  "header": {
+    "pps_version": "PPS-v1.0.0",
+    "model": {
+      "name": "gpt-X",
+      "digest": "sha256-EXAMPLE",
+      "data_cutoff": "2024-01-01"
+    },
+    "decode": {
+      "seed": 42,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "locale": "zh-CN",
+    "compliance": [
+      "general"
+    ]
+  },
+  "body": {
+    "what": {
+      "task": "对文本进行情感分类（正向/中性/负向）",
+      "input_schema": {
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": [
+          "label",
+          "confidence"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "enum": [
+              "positive",
+              "neutral",
+              "negative"
+            ]
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      },
+      "kpi": [
+        "accuracy>=0.9"
+      ]
+    },
+    "why": {
+      "goals": [
+        "提升客服分流效率"
+      ],
+      "constraints": [
+        "必须可解释：给出一句理由"
+      ]
+    },
+    "who": {
+      "persona": "NLP分类器",
+      "capabilities": [
+        "函数调用",
+        "JSON输出"
+      ],
+      "policy": [
+        "不得输出个人敏感信息"
+      ]
+    },
+    "when": {
+      "timeframe": "过去三个月"
+    },
+    "where": {
+      "environment": "prod",
+      "evidence": [
+        {
+          "uri": "s3://bucket/guidelines.md",
+          "digest": "sha256-abc"
+        }
+      ],
+      "citations_required": false
+    },
+    "how_to_do": {
+        "paradigm": "ReAct",
+        "steps": [
+          "读取输入",
+          "判断情感倾向",
+          "输出JSON"
+        ],
+        "tools": [
+          "fn:emit_json"
+        ]
+      },
+    "how_much": {
+        "content_length": "简短JSON输出",
+        "quality_guidance": "包含label与confidence"
+      },
+    "how_feel": {
+        "tone": "中性",
+        "style": "简洁"
+      },
+    "how_interface": {
+      "format": "json",
+      "schema": {
+        "$ref": "#/body/what/output_schema"
+      }
+    },
+    "how_meta": {
+      "governance": {
+        "verification": [
+          "json_schema"
+        ],
+        "citations": false
+      }
+    }
+  },
+  "integrity": {
+    "canonical_hash": "sha256:vC1oB0VpzKiHFDQR0aA2mU8JeP_Watm6ywUZSXPuWmc"
+  }
+}

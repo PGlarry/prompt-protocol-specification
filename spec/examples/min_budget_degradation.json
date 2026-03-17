@@ -1,0 +1,54 @@
+{
+  "header": {
+    "pps_version": "PPS-v1.0.0",
+    "model": {
+      "name": "gpt-X",
+      "digest": "sha256-EXAMPLE",
+      "data_cutoff": "2024-01-01"
+    },
+    "decode": {
+      "seed": 13,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "locale": "zh-CN"
+  },
+  "body": {
+    "what": {
+      "task": "撰写500字摘要"
+    },
+    "why": {
+      "goals": [
+        "信息覆盖"
+      ],
+      "constraints": []
+    },
+    "who": {
+      "persona": "编辑"
+    },
+    "when": {
+      "timeframe": "当前会话"
+    },
+    "where": {
+      "environment": "local",
+      "evidence": []
+    },
+    "how_to_do": {
+        "paradigm": "CoT",
+        "steps": [
+          "提取要点",
+          "撰写"
+        ]
+      },
+    "how_much": {
+        "content_length": "≤500字",
+        "detail_richness": "仅核心要点"
+      },
+    "how_feel": {
+        "tone": "客观"
+      }
+  },
+  "integrity": {
+    "canonical_hash": "sha256:gfjXBg7STAkP_LAe99y2IFa7TDwyUhNu5SUwmKtsdr0"
+  }
+}

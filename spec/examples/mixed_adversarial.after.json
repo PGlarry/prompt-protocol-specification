@@ -1,0 +1,11 @@
+{
+  "header": {"pps_version": "PPS-v1.0.0"},
+  "body": {
+    "what": {"task": "混合对抗场景（演示）"},
+    "how_meta": {"governance": {"locks": ["/body/where/environment"]}},
+    "where": {"environment": "staging", "evidence": []}
+  },
+  "integrity": {"canonical_hash": "sha256:TO_BE_RECALC"}
+}
+
+

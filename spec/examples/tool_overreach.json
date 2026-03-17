@@ -1,0 +1,63 @@
+{
+  "header": {
+    "pps_version": "PPS-v1.0.0",
+    "model": {
+      "name": "gpt-X",
+      "digest": "sha256-EXAMPLE",
+      "data_cutoff": "2024-01-01"
+    },
+    "decode": {
+      "seed": 11,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "locale": "zh-CN"
+  },
+  "body": {
+    "what": {
+      "task": "执行内部数据分析并输出结论"
+    },
+    "why": {
+      "goals": [
+        "准确分析"
+      ],
+      "constraints": []
+    },
+    "who": {
+      "persona": "分析助手",
+      "capabilities": [
+        "JSON输出"
+      ]
+    },
+    "when": {
+      "timeframe": "当前季度"
+    },
+    "where": {
+      "environment": "prod",
+      "evidence": []
+    },
+    "how_to_do": {
+        "paradigm": "Plan-Execute",
+        "steps": [
+          "加载数据",
+          "分析",
+          "输出"
+        ],
+        "tools": [
+          "db_query",
+          "fn:emit_json"
+        ]
+      },
+    "how_much": {
+        "content_length": "800-1200字",
+        "structure_elements": "3-4节结构",
+        "quality_guidance": "可复核、步骤清晰"
+      },
+    "how_feel": {
+        "tone": "专业"
+      }
+  },
+  "integrity": {
+    "canonical_hash": "sha256:S20py4NXbIaf4sPysK7YbAO3PI88MFmpBM883o1hTWE"
+  }
+}

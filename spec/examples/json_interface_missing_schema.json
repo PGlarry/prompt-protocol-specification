@@ -1,0 +1,71 @@
+{
+  "header": {
+    "pps_version": "PPS-v1.0.0",
+    "model": {
+      "name": "gpt-X",
+      "digest": "sha256-EXAMPLE",
+      "data_cutoff": "2024-01-01"
+    },
+    "decode": {
+      "seed": 7,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "locale": "zh-CN"
+  },
+  "body": {
+    "what": {
+      "task": "输出JSON的分类结果",
+      "output_schema": {
+        "type": "object",
+        "required": [
+          "label"
+        ],
+        "properties": {
+          "label": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "why": {
+      "goals": [
+        "结构化输出"
+      ],
+      "constraints": []
+    },
+    "who": {
+      "persona": "分类器"
+    },
+    "when": {
+      "timeframe": "当前会话"
+    },
+    "where": {
+      "environment": "local",
+      "evidence": []
+    },
+    "how_to_do": {
+        "paradigm": "CoT",
+        "steps": [
+          "判断",
+          "输出"
+        ],
+        "tools": [
+          "fn:emit_json"
+        ]
+      },
+    "how_much": {
+        "content_length": "简短JSON（单对象）",
+        "quality_guidance": "字段齐全"
+      },
+    "how_feel": {
+        "tone": "中性"
+      },
+    "how_interface": {
+      "format": "json"
+    }
+  },
+  "integrity": {
+    "canonical_hash": "sha256:EhtrK_NuxNyqz8JvmuDsvBSkCsuSCG_aY8UpE8dvn3M"
+  }
+}

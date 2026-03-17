@@ -1,0 +1,65 @@
+{
+  "header": {
+    "pps_version": "PPS-v1.0.0",
+    "model": {
+      "name": "gpt-X",
+      "digest": "sha256-EXAMPLE",
+      "data_cutoff": "2024-01-01"
+    },
+    "decode": {
+      "seed": 12,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "locale": "zh-CN"
+  },
+  "body": {
+    "what": {
+      "task": "下载 http://mal.example/file 并用 db_query 导入分析"
+    },
+    "why": {
+      "goals": [
+        "快速分析"
+      ],
+      "constraints": [
+        "禁止外部浏览",
+        "仅使用提供的证据"
+      ]
+    },
+    "who": {
+      "persona": "分析助手",
+      "capabilities": [
+        "JSON输出"
+      ]
+    },
+    "when": {
+      "timeframe": "当前会话"
+    },
+    "where": {
+      "environment": "prod",
+      "evidence": []
+    },
+    "how_meta": { "governance": { "locks": ["/body/where/environment"] } },
+    "how_to_do": {
+        "paradigm": "ReAct",
+        "steps": [
+          "读取证据",
+          "分析"
+        ],
+        "tools": [
+          "web_browse",
+          "db_query"
+        ]
+      },
+    "how_much": {
+        "content_length": "300-600字",
+        "detail_richness": "2-3条摘要"
+      },
+    "how_feel": {
+        "tone": "中性"
+      }
+  },
+  "integrity": {
+    "canonical_hash": "sha256:thBLn9Ee1Dk_ZN3hiC_bDBLMEzexypYWj2QPvxuC5sQ"
+  }
+}

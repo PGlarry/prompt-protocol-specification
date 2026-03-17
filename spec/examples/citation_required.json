@@ -1,0 +1,74 @@
+{
+  "header": {
+    "pps_version": "PPS-v1.0.0",
+    "model": {
+      "name": "gpt-X",
+      "digest": "sha256-EXAMPLE",
+      "data_cutoff": "2024-01-01"
+    },
+    "decode": {
+      "seed": 3,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "locale": "zh-CN"
+  },
+  "body": {
+    "what": {
+      "task": "基于证据撰写带引用的摘要"
+    },
+    "why": {
+      "goals": [
+        "可验证性"
+      ],
+      "constraints": [
+        "每个结论附带引用标注"
+      ]
+    },
+    "who": {
+      "persona": "研究助理",
+      "capabilities": [
+        "JSON输出",
+        "函数调用"
+      ]
+    },
+    "when": {
+      "timeframe": "当月"
+    },
+    "where": {
+      "environment": "prod",
+      "evidence": [
+        {
+          "uri": "ipfs://bafy...",
+          "digest": "sha256-xyz",
+          "title": "Report"
+        }
+      ],
+      "citations_required": true
+    },
+    "how_to_do": {
+        "paradigm": "CoT",
+        "steps": [
+          "解析证据",
+          "标注引用",
+          "输出"
+        ],
+        "tools": [
+          "fn:emit_json"
+        ]
+      },
+    "how_much": {
+        "content_length": "600-900字",
+        "structure_elements": "含引用标注",
+        "quality_guidance": "引用可核验、格式规范"
+      },
+    "how_feel": {
+        "tone": "客观",
+        "style": "简练"
+      },
+    "how_meta": { "governance": { "citations": true } }
+  },
+  "integrity": {
+    "canonical_hash": "sha256:x-OOVmgL1bwhTsjYQCI13pO6opBkeRpeEihPLJLaNXc"
+  }
+}

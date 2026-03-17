@@ -1,0 +1,69 @@
+{
+  "header": {
+    "pps_version": "PPS-v1.0.0",
+    "model": {
+      "name": "gpt-X",
+      "digest": "sha256-EXAMPLE",
+      "data_cutoff": "2024-01-01"
+    },
+    "decode": {
+      "seed": 1,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "locale": "zh-CN"
+  },
+  "body": {
+    "what": {
+      "task": "抓取网页并总结提供的材料（不允许访问外部链接）"
+    },
+    "why": {
+      "goals": [
+        "生成会议纪要"
+      ],
+      "constraints": [
+        "仅使用提供的证据，禁止外部浏览"
+      ]
+    },
+    "who": {
+      "persona": "内部合规助理",
+      "capabilities": [
+        "JSON输出"
+      ]
+    },
+    "when": {
+      "timeframe": "本周"
+    },
+    "where": {
+      "environment": "prod",
+      "evidence": [
+        {
+          "uri": "content://placeholder",
+          "digest": "sha256-PLACEHOLDER",
+          "title": "Placeholder Evidence"
+        }
+      ],
+      "citations_required": true
+    },
+    "how_to_do": {
+        "paradigm": "ReAct",
+        "steps": [
+          "读取证据",
+          "总结"
+        ],
+        "tools": []
+      },
+    "how_much": {
+        "content_length": "600-900字",
+        "structure_elements": "3-4段",
+        "detail_richness": "要点式总结（3-5条）"
+      },
+    "how_feel": {
+        "tone": "正式",
+        "style": "简洁"
+      }
+  },
+  "integrity": {
+    "canonical_hash": "sha256:wmOlcnrxGQZ-sPz0rl6zY-J9paovLMW990ofg4pb7gU"
+  }
+}

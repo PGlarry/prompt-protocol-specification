@@ -1,0 +1,70 @@
+{
+  "header": {
+    "pps_version": "PPS-v1.0.0",
+    "model": {
+      "name": "gpt-X",
+      "digest": "sha256-EXAMPLE",
+      "data_cutoff": "2024-01-01"
+    },
+    "decode": {
+      "seed": 2,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "locale": "zh-CN"
+  },
+  "body": {
+    "what": {
+      "task": "生成长篇技术白皮书"
+    },
+    "why": {
+      "goals": [
+        "详尽覆盖"
+      ],
+      "constraints": [
+        "引用真实资料"
+      ]
+    },
+    "who": {
+      "persona": "技术作者",
+      "capabilities": [
+        "函数调用",
+        "JSON输出",
+        "web_browse"
+      ]
+    },
+    "when": {
+      "timeframe": "本季度"
+    },
+    "where": {
+      "environment": "prod",
+      "evidence": [],
+      "citations_required": false
+    },
+    "how_to_do": {
+        "paradigm": "Plan-Execute",
+        "steps": [
+          "拟定大纲",
+          "逐章撰写"
+        ],
+        "tools": [
+          "fn:emit_json",
+          "web_browse"
+        ]
+      },
+    "how_much": {
+        "content_length": "5-7万字（白皮书全稿，分章节）",
+        "structure_elements": "10-12章，含摘要/引言/方法/实验/讨论/附录",
+        "detail_richness": "每章3-5个关键论点，配数据与图表",
+        "quality_guidance": "术语统一、可复核、图表齐全、引文规范",
+        "cultural_depth": "行业背景/标准对照/国产化环境适配"
+      },
+    "how_feel": {
+        "tone": "中性",
+        "style": "学术"
+      }
+  },
+  "integrity": {
+    "canonical_hash": "sha256:Mi7nU97YIdj3x46kgvj4a1IVm5uYl0UhOXfI90evhTs"
+  }
+}

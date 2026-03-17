@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pps.dev/schema/pps-1.0.json",
+  "title": "PPS Envelope v1.0",
+  "type": "object",
+  "allOf": [ { "$ref": "../pps.schema.json" } ],
+  "properties": {
+    "header": {
+      "properties": {
+        "pps_version": { "const": "PPS-v1.0.0" }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,13 @@
+CASE,SCHEMA,POLICY
+spec/examples/minimal.json,PASS,PASS
+spec/examples/classification.json,PASS,PASS
+spec/examples/adversarial.json,PASS,PASS
+spec/examples/budget_violation.json,PASS,FAIL
+spec/examples/citation_required.json,PASS,PASS
+spec/examples/json_interface_missing_schema.json,PASS,FAIL
+spec/examples/gdpr_missing_no_pii.json,PASS,PASS
+spec/examples/rag_citations_required.json,PASS,PASS
+spec/examples/prompt_injection_url.json,PASS,FAIL
+spec/examples/tool_overreach.json,PASS,FAIL
+spec/examples/mixed_adversarial.json,PASS,FAIL
+spec/examples/min_budget_degradation.json,PASS,PASS
