@@ -1,0 +1,22 @@
+{
+  "name": "pps-conformance",
+  "version": "1.0.0",
+  "description": "PPS v1.0 conformance tools for the Prompt Protocol Specification (5W3H)",
+  "scripts": {
+    "pps:validate": "node tests/pps-conformance/validate.js",
+    "pps:policy":   "node tests/pps-conformance/policy_checks.js",
+    "pps:hash":     "node tests/pps-conformance/canonicalize.js",
+    "pps:fix":      "node tests/pps-conformance/auto_fix.js",
+    "pps:verify":   "node tools/pps-verify.js",
+    "pps:summary":  "node tests/pps-conformance/summary.js",
+    "test":         "node tests/pps-conformance/summary.js"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PGlarry/prompt-protocol-specification.git"
+  }
+}

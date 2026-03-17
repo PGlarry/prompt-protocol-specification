@@ -1,0 +1,43 @@
+name: PPS Conformance
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  conformance:
+    name: Run Conformance Suite
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Full conformance summary
+        run: npm test
+
+      - name: Validate all examples
+        run: |
+          for f in spec/examples/*.json; do
+            echo "→ validating $f"
+            node tests/pps-conformance/validate.js "$f" || true
+          done
+
+      - name: Locks compliance check
+        run: |
+          for before in spec/examples/*.json; do
+            after="${before%.json}.after.json"
+            if [ -f "$after" ]; then
+              echo "→ locks check: $before → $after"
+              node tests/pps-conformance/locks_compliance.js "$before" "$after" --json
+            fi
+          done
