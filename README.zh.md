@@ -167,7 +167,7 @@ PPS 定义三种符合性级别，在 `header.compliance` 中声明：
 
 - **规范文档**（`spec/`）：[CC BY 4.0](spec/PPS-1.0/IP_NOTICE.md) — 署名后可自由使用、分享、改编
 - **工具与测试**（`tools/`、`tests/`）：[MIT](LICENSE)
-- **专利声明**：PPS 规范不主张任何专利，详见 [IP_NOTICE.md](spec/PPS-1.0/IP_NOTICE.md)
+- **完全开放**：PPS 与 5W3H 完全开放，不主张任何专利（未申请、未主张）。任何人均可自由实现与商业化，详见 [IP_NOTICE.md](spec/PPS-1.0/IP_NOTICE.md)
 
 ---
 

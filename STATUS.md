@@ -21,8 +21,9 @@ This repository publishes PPS (Prompt Protocol Specification) as a community, pa
 - Source of truth: this repository (tags/releases)
 - Changes: PR + review; semver versioning; normative changes require a minor/major bump
 
-## IP & Patent
-- PPS spec is patent‑free; see `spec/PPS-1.0/IP_NOTICE.md`
+## IP & Openness
+- PPS and the 5W3H framework are fully open and patent-free (no patents filed or claimed) — like TCP/IP, anyone can freely implement and commercialize without any patent license
+- Software copyright on the creative expression of this specification is held by Gang Peng (CC BY 4.0 / MIT); see `spec/PPS-1.0/IP_NOTICE.md`
 - Code under MIT; docs under CC BY 4.0
 
 ## Conformance quick links

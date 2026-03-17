@@ -1,30 +1,93 @@
-# PPS v1.0 — Intellectual Property & Patent Notice
+# PPS v1.0 — Intellectual Property Notice
 
-本文件阐明 Prompt Protocol Specification（PPS）v1.0 的知识产权与专利关系，确保实现者与采用者可以自由、清晰地使用本规范。
+**Language / 语言 / 言語**：[English](#english) · [中文](#中文) · [日本語](#日本語)
 
-## 1. 许可证与适用范围
-- 规范文档（spec/PPS-1.0/*）：CC BY 4.0（需署名、可商用、可改编）
-- 工具与脚本（tests/*、tools/*）：MIT License（宽松开源许可）
-- JSON Schema（spec/*.schema.json）：作为规范文档的一部分（CC BY 4.0）
+---
 
-## 2. Patent‑free（规范层）
-- PPS 作为“开放规范（Community Specification）”本身不主张也不依赖任何实施专利。
-- 任何符合本规范的实现可在全球范围内自由采用，无需另行专利授权。
+## English
 
-## 3. 与独立专利的关系（实现层）
-- 作者已在中国提交与“5W3H 构建 AI 提示词设计”的相关专利，该专利仅针对具体实现方法与流程，地域限定于中国。
-- PPS 规范不包含上述专利的技术主张；采用 PPS 并不等于实施任何特定专利。
-- 在中国境内如拟商业化实施且与专利覆盖点重合，请依法与专利权人沟通授权；境外不受该专利约束。
+### License
 
-## 4. 防御性公开（Prior Art）
-- 建议将规范与实现发布至公开平台（GitHub / Zenodo / arXiv 等），生成 DOI/时间戳，形成先有技术，防止第三方就等同内容申请专利。
+| Component | License |
+|-----------|---------|
+| Specification documents (`spec/`) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to use, share, and adapt with attribution |
+| Tools & tests (`tools/`, `tests/`) | [MIT](../../LICENSE) — permissive open source |
+| JSON Schema (`schema/`) | CC BY 4.0 (part of the specification) |
 
-## 5. 未来标准化与承诺
-- 若进入标准化组织（W3C / IETF / ISO 等），将遵循相应专利政策（如 W3C Royalty‑Free、IETF RAND/RAND‑Z）。
-- 如涉及作者拥有的相关专利，作者将考虑出具 “RAND‑Z（免版税、非歧视）” 承诺，保障开放采用。
+### Patent-Free Declaration
 
-## 6. 免责声明
-- 本规范按“现状”提供，不提供任何明示或默示的保证。
-- 采用者需自行评估并遵守各法域适用法律与合规要求。
+PPS (Prompt Protocol Specification) and the 5W3H model are **fully open and patent-free**.
 
-— 如需法律或授权咨询，请使用仓库主页的联系方式。
+- No patents have been filed or claimed on the PPS specification or the 5W3H framework.
+- Anyone may freely implement, deploy, build upon, or commercialize PPS worldwide without any patent licensing requirement — just like TCP/IP.
+- This openness is intentional and permanent.
+
+### Software Copyright
+
+The creative expression of this specification (documents, examples, schema, tools) is protected under copyright held by Gang Peng. The CC BY 4.0 and MIT licenses grant broad rights to use this material with attribution.
+
+Developers who build their own implementations or products on top of PPS may independently register software copyright for their own work — this does not conflict with the PPS copyright or licenses.
+
+### Disclaimer
+
+This specification is provided "as is" without warranties of any kind. Adopters are responsible for assessing and complying with applicable laws in their jurisdictions.
+
+---
+
+## 中文
+
+### 许可证
+
+| 组件 | 许可证 |
+|------|--------|
+| 规范文档（`spec/`） | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — 署名后可自由使用、分享、改编 |
+| 工具与测试（`tools/`、`tests/`） | [MIT](../../LICENSE) — 宽松开源 |
+| JSON Schema（`schema/`） | CC BY 4.0（规范文档的组成部分） |
+
+### 无专利声明
+
+PPS（提示词协议规范）与 5W3H 模型**完全开放，不主张任何专利**。
+
+- 作者未就 PPS 规范或 5W3H 框架提交或主张任何专利。
+- 任何人均可在全球范围内自由实现、部署、二次开发或商业化 PPS，无需任何专利授权——就像 TCP/IP 一样。
+- 这种开放性是有意为之且永久有效的。
+
+### 软件著作权
+
+本规范的创作性表达（文档、示例、Schema、工具）受彭刚持有的著作权保护。CC BY 4.0 与 MIT 许可证已授予在署名前提下广泛使用本材料的权利。
+
+基于 PPS 构建自有实现或产品的开发者，可独立申请其自身作品的软件著作权——这与 PPS 的著作权和许可证不冲突。
+
+### 免责声明
+
+本规范按"现状"提供，不附任何明示或默示的保证。采用者需自行评估并遵守各法域适用法律。
+
+---
+
+## 日本語
+
+### ライセンス
+
+| コンポーネント | ライセンス |
+|--------------|-----------|
+| 仕様ドキュメント（`spec/`） | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — 帰属表示の上、自由に使用・共有・改変可能 |
+| ツールとテスト（`tools/`、`tests/`） | [MIT](../../LICENSE) — 寛容なオープンソース |
+| JSON Schema（`schema/`） | CC BY 4.0（仕様ドキュメントの一部） |
+
+### 特許フリー宣言
+
+PPS（プロンプト・プロトコル仕様）と5W3Hモデルは**完全にオープンであり、特許フリーです**。
+
+- PPS仕様または5W3Hフレームワークに関して、特許の出願や主張は行っていません。
+- TCP/IPと同様に、誰もが特許ライセンスを必要とせず、世界中でPPSを自由に実装、展開、応用、または商業化できます。
+- このオープン性は意図的かつ恒久的なものです。
+
+### ソフトウェア著作権
+
+本仕様の創作的表現（ドキュメント、例、スキーマ、ツール）は彭剛（Peng Gang）が保有する著作権によって保護されています。CC BY 4.0およびMITライセンスは、帰属表示を条件として、この素材を広く使用する権利を付与します。
+
+PPSをベースに独自の実装や製品を構築する開発者は、自身の作品についてソフトウェア著作権を独立して登録できます。これはPPSの著作権やライセンスと競合しません。
+
+### 免責事項
+
+本仕様は「現状のまま」提供され、いかなる種類の保証も行いません。採用者は各法域の適用法令を自ら評価し、遵守する責任を負います。

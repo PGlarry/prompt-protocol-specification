@@ -167,7 +167,7 @@ If you use PPS in academic work, please cite:
 
 - **Specification documents** (`spec/`): [CC BY 4.0](spec/PPS-1.0/IP_NOTICE.md) — free to use, share, adapt with attribution
 - **Tools & tests** (`tools/`, `tests/`): [MIT](LICENSE)
-- **Patent notice**: The PPS specification is patent-free. See [IP_NOTICE.md](spec/PPS-1.0/IP_NOTICE.md) for details.
+- **Openness**: PPS and 5W3H are fully open and patent-free — no patents filed or claimed. Anyone may freely implement and commercialize. See [IP_NOTICE.md](spec/PPS-1.0/IP_NOTICE.md).
 
 ---
 

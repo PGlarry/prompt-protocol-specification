@@ -17,8 +17,8 @@
 - 示例均为 `PPS-v1.0.0`
 
 ## 许可证与 IP (License & IP)
-- Docs: CC BY 4.0；Code/Tools: MIT；Spec is patent‑free
-- 中国境内 5W3H 实现专利与 PPS 规范相互独立，详见 `spec/PPS-1.0/IP_NOTICE.md`
+- Docs: CC BY 4.0；Code/Tools: MIT；Spec is patent‑free (no patents filed or claimed)
+- PPS 与 5W3H 完全开放，任何人可自由实现与商业化，无需专利授权，详见 `spec/PPS-1.0/IP_NOTICE.md`
 
 ## 一键校验 (One‑command checks)
 ```bash
@@ -40,5 +40,5 @@ node tests/pps-conformance/summary.js
 
 ## English Summary
 - PPS v1.0.0 (Community Specification) — flat 5W3H, open how_much, conformance suite
-- Patent‑free spec; Docs CC BY 4.0; Tools MIT; see IP notice
+- Patent‑free (no patents filed); Docs CC BY 4.0; Tools MIT; see IP_NOTICE.md
 - Run `node tests/pps-conformance/summary.js` to validate examples
