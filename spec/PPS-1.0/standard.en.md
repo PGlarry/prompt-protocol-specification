@@ -5,7 +5,7 @@ version: 1.0.0
 lang: en
 ---
 
-**Language / 语言 / 言語**：[中文](standard.md) · [English](standard.en.md) · [日本語](standard.ja.md)
+**Language / 语言 / 言語 / 언어 / Idioma**：[中文](standard.md) · [English](standard.en.md) · [日本語](standard.ja.md) · [한국어](standard.ko.md) · [Español](standard.es.md)
 
 ---
 
