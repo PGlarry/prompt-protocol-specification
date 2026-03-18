@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**[English](README.md) · [中文](README.zh.md) · [日本語](README.ja.md)**
+**[English](README.md) · [中文](README.zh.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)**
 
 [![License: MIT](https://img.shields.io/badge/工具-MIT-blue.svg)](LICENSE)
 [![Docs: CC BY 4.0](https://img.shields.io/badge/文档-CC%20BY%204.0-green.svg)](spec/PPS-1.0/IP_NOTICE.md)
