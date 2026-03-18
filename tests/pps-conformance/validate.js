@@ -17,7 +17,7 @@ function main() {
     process.exit(2);
   }
 
-  const schema = loadJson('spec/pps.schema.json');
+  const schema = loadJson('schema/pps.schema.json');
   const data = loadJson(target);
 
   const ajv = new Ajv({ allErrors: true, strict: false, validateFormats: false });
