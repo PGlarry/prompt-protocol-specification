@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "pps-sdk"
+version = "1.0.0"
+description = "Official SDK for PPS (Prompt Protocol Specification) — validate, check policy, canonicalize, and auto-fix PPS envelopes"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Gang Peng" }]
+keywords = ["pps", "5w3h", "prompt-protocol", "ai", "llm", "structured-prompting"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+]
+requires-python = ">=3.9"
+dependencies = [
+  "jsonschema>=4.17",
+]
+
+[project.urls]
+Homepage = "https://github.com/PGlarry/prompt-protocol-specification/releases/tag/v1.0.0"
+Repository = "https://github.com/PGlarry/prompt-protocol-specification"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pps*"]

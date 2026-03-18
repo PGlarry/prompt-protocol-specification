@@ -6,7 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/Tools-MIT-blue.svg)](LICENSE)
 [![Docs: CC BY 4.0](https://img.shields.io/badge/Docs-CC%20BY%204.0-green.svg)](spec/PPS-1.0/IP_NOTICE.md)
-[![Version](https://img.shields.io/badge/PPS-v1.0.0-orange.svg)](spec/PPS-1.0/standard.md)
+[![Version](https://img.shields.io/badge/PPS-v1.0.0-orange.svg)](https://github.com/PGlarry/prompt-protocol-specification/releases/tag/v1.0.0)
 [![Status](https://img.shields.io/badge/Status-Community%20Specification-brightgreen.svg)](STATUS.md)
 
 *An open 8-dimension structured instruction framework for Human-AI Interaction*
@@ -149,7 +149,7 @@ If you use PPS in academic work, please cite:
   author    = {Peng, Gang},
   year      = {2026},
   note      = {arXiv preprint, cs.HC},
-  url       = {https://github.com/PGlarry/prompt-protocol-specification}
+  url       = {https://github.com/PGlarry/prompt-protocol-specification/releases/tag/v1.0.0}
 }
 ```
 
