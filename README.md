@@ -70,7 +70,7 @@ Empirical results from a controlled experiment (60 topics × 3 LLMs × 3 conditi
 | Follow-up prompts needed | ~3.3 rounds | ~1.1 rounds | **−66%** |
 | First-impression accuracy | — | **85%** accurate on first expansion | — |
 
-> Full methodology and results: [Paper (arXiv)](https://arxiv.org/abs/PENDING) · [Experiment data](experiments/)
+> Full methodology and results: [Paper (arXiv)](https://arxiv.org/abs/2603.18976) · [Experiment data](experiments/)
 
 **Key insight**: Traditional LLM evaluation metrics show A > C due to *constraint scoring asymmetry* — prompts without constraints trivially score perfect. When evaluated on user-intent alignment (`goal_alignment`), structured PPS prompts significantly outperform simple prompts, especially in high-ambiguity domains (business: *d* = 0.895).
 
@@ -148,8 +148,10 @@ If you use PPS in academic work, please cite:
                5W3H-Based Prompt Protocol for Human-AI Interaction},
   author    = {Peng, Gang},
   year      = {2026},
-  note      = {arXiv preprint, cs.HC},
-  url       = {https://github.com/PGlarry/prompt-protocol-specification/releases/tag/v1.0.0}
+  eprint    = {2603.18976},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.HC},
+  url       = {https://arxiv.org/abs/2603.18976}
 }
 ```
 

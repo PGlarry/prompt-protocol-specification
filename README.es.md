@@ -70,7 +70,7 @@ Resultados empíricos de un experimento controlado (60 temas × 3 LLMs × 3 cond
 | Prompts de seguimiento necesarios | ~3.3 rondas | ~1.1 rondas | **−66%** |
 | Precisión en primera impresión | — | **85%** preciso en primera expansión | — |
 
-> Metodología completa y resultados: [Artículo (arXiv)](https://arxiv.org/abs/PENDING) · [Datos experimentales](experiments/)
+> Metodología completa y resultados: [Artículo (arXiv)](https://arxiv.org/abs/2603.18976) · [Datos experimentales](experiments/)
 
 **Conclusión clave**: Las métricas tradicionales de evaluación LLM muestran A > C debido a la *asimetría de puntuación de restricciones* — los prompts sin restricciones obtienen puntuaciones perfectas trivialmente. Cuando se evalúa la alineación con la intención del usuario (`goal_alignment`), los prompts PPS estructurados superan significativamente a los simples, especialmente en dominios de alta ambigüedad (negocios: *d* = 0.895).
 
@@ -148,8 +148,10 @@ Si utilizas PPS en trabajos académicos, por favor cita:
                5W3H-Based Prompt Protocol for Human-AI Interaction},
   author    = {Peng, Gang},
   year      = {2026},
-  note      = {arXiv preprint, cs.HC},
-  url       = {https://github.com/PGlarry/prompt-protocol-specification}
+  eprint    = {2603.18976},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.HC},
+  url       = {https://arxiv.org/abs/2603.18976}
 }
 ```
 

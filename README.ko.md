@@ -70,7 +70,7 @@ PPS는 **5W3H 모델**을 기반으로 합니다: *What(무엇을), Why(왜), Wh
 | 필요한 후속 프롬프트 수 | ~3.3회 | ~1.1회 | **−66%** |
 | 첫 번째 시도 정확도 | — | **85%** 첫 번째 확장에서 정확 | — |
 
-> 전체 방법론 및 결과: [논문 (arXiv)](https://arxiv.org/abs/PENDING) · [실험 데이터](experiments/)
+> 전체 방법론 및 결과: [논문 (arXiv)](https://arxiv.org/abs/2603.18976) · [실험 데이터](experiments/)
 
 **핵심 인사이트**: 기존 LLM 평가 지표는 *제약 조건 점수 비대칭* 으로 인해 A > C로 나타납니다 — 제약 조건이 없는 프롬프트는 제약 준수에서 완벽한 점수를 쉽게 받습니다. 사용자 의도 정렬(`goal_alignment`)으로 평가할 때, 구조화된 PPS 프롬프트는 특히 고모호성 도메인(비즈니스: *d* = 0.895)에서 단순 프롬프트를 크게 능가합니다.
 
@@ -148,8 +148,10 @@ PPS는 `header.compliance`에 선언되는 세 가지 적합성 수준을 정의
                5W3H-Based Prompt Protocol for Human-AI Interaction},
   author    = {Peng, Gang},
   year      = {2026},
-  note      = {arXiv preprint, cs.HC},
-  url       = {https://github.com/PGlarry/prompt-protocol-specification}
+  eprint    = {2603.18976},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.HC},
+  url       = {https://arxiv.org/abs/2603.18976}
 }
 ```
 

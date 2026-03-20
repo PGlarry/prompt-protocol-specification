@@ -70,7 +70,7 @@ PPS 基于 **5W3H 模型**构建：*What（做什么）、Why（为何做）、W
 | 需要追问轮数 | ≈ 3.3轮 | ≈ 1.1轮 | **降低66%** |
 | 首次展开准确率 | — | **85%** 准确或非常准确 | — |
 
-> 完整方法与结果：[论文（arXiv）](https://arxiv.org/abs/PENDING) · [实验数据](experiments/)
+> 完整方法与结果：[论文（arXiv）](https://arxiv.org/abs/2603.18976) · [实验数据](experiments/)
 
 **核心发现**：传统评估指标因"约束评分不对称"现象虚高了简单提示词的得分——无约束提示词在约束遵从维度上得到满分，是空洞的真命题。当以用户意图对齐度（`goal_alignment`）评估时，结构化 PPS 提示词显著优于简单提示词，在高歧义领域尤为突出（商业分析：*d* = 0.895）。
 
@@ -148,8 +148,10 @@ PPS 定义三种符合性级别，在 `header.compliance` 中声明：
                5W3H-Based Prompt Protocol for Human-AI Interaction},
   author    = {Peng, Gang},
   year      = {2026},
-  note      = {arXiv preprint, cs.HC},
-  url       = {https://github.com/PGlarry/prompt-protocol-specification}
+  eprint    = {2603.18976},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.HC},
+  url       = {https://arxiv.org/abs/2603.18976}
 }
 ```
 
