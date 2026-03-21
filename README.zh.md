@@ -144,13 +144,13 @@ PPS 定义三种符合性级别，在 `header.compliance` 中声明：
 
 ```bibtex
 @article{peng2026pps,
-  title     = {PPS: Structured Intent Transmission — An Empirical Study of a
-               5W3H-Based Prompt Protocol for Human-AI Interaction},
+  title     = {Evaluating 5W3H Structured Prompting for Intent Alignment in
+               Human-AI Interaction},
   author    = {Peng, Gang},
   year      = {2026},
   eprint    = {2603.18976},
   archivePrefix = {arXiv},
-  primaryClass = {cs.HC},
+  primaryClass = {cs.AI},
   url       = {https://arxiv.org/abs/2603.18976}
 }
 ```
