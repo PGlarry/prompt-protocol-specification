@@ -1,0 +1,71 @@
+{
+  "name": "PPS-Bench",
+  "version": "1.0.0",
+  "total_records": 4440,
+  "breakdown": {
+    "paper1_zh_travel": 120,
+    "paper2_en": 540,
+    "paper2_ja": 540,
+    "paper3_zh_en_ja": 3240
+  },
+  "languages": [
+    "zh",
+    "en",
+    "ja"
+  ],
+  "models": {
+    "paper1_2": [
+      "deepseek",
+      "qwen",
+      "kimi"
+    ],
+    "paper3": [
+      "claude",
+      "gpt4o",
+      "gemini"
+    ]
+  },
+  "model_versions": {
+    "deepseek": "deepseek-chat",
+    "qwen": "qwen-max",
+    "kimi": "moonshot-v1-8k",
+    "claude": "claude-sonnet-4-20250514",
+    "gpt4o": "gpt-4o",
+    "gemini": "gemini-2.5-pro"
+  },
+  "conditions": {
+    "paper1_2": [
+      "A",
+      "B",
+      "C"
+    ],
+    "paper3": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ]
+  },
+  "condition_names": {
+    "A": "Simple Prompt",
+    "B": "Structured JSON (PPS Raw)",
+    "C": "Manual 5W3H (Natural Language)",
+    "D": "AI-Expanded 5W3H (PPS Full, via lateni.com)",
+    "E": "CO-STAR",
+    "F": "RISEN"
+  },
+  "domains": [
+    "travel",
+    "business",
+    "technical"
+  ],
+  "tasks_per_domain": 20,
+  "evaluation_metric": "goal_alignment (1-5, judged by DeepSeek-V3)",
+  "papers": [
+    "Paper 1: PPS in Chinese Tasks (DeepSeek/Qwen/Kimi, ZH, A/B/C)",
+    "Paper 2: Cross-Language Generalization (DeepSeek/Qwen/Kimi, EN, A/B/C)",
+    "Paper 3: Cross-Model Robustness (Claude/GPT-4o/Gemini, ZH+EN+JA, A/B/C/D/E/F)"
+  ]
+}
