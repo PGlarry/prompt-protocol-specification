@@ -6,9 +6,9 @@
 
 ## Overview
 
-PPS-Bench is an open multilingual benchmark dataset designed for research on **structured intent transmission in human-AI interaction**. It provides parallel prompts across 3 languages, 6 prompt formats, 3 AI models, and 3 task domains — each with a goal alignment (GA) evaluation score.
+PPS-Bench is an open multilingual benchmark dataset designed for research on **structured intent transmission in human-AI interaction**. It provides parallel prompts across 3 languages, 6 prompt formats, 6 AI models, and 3 task domains — each with a goal alignment (GA) evaluation score.
 
-This dataset accompanies the PPS (Prompt Protocol Specification) research papers. It enables reproducible experiments and serves as a reference corpus for the prompt engineering community.
+This dataset accompanies a three-paper series on the PPS (Prompt Protocol Specification) / 5W3H framework. Data is organized **by paper** so readers can independently verify each paper's results.
 
 ---
 
@@ -16,7 +16,8 @@ This dataset accompanies the PPS (Prompt Protocol Specification) research papers
 
 | Dimension | Details |
 |-----------|---------|
-| Total Records | **4,440** |
+| Total Records (with paper overlaps) | **5,940** |
+| Unique Experimental Records | **5,400** |
 | Languages | ZH (Chinese), EN (English), JA (Japanese) |
 | Prompt Conditions | A / B / C / D / E / F (see table below) |
 | AI Models | Claude, GPT-4o, Gemini 2.5 Pro, DeepSeek, Qwen, Kimi |
@@ -24,14 +25,15 @@ This dataset accompanies the PPS (Prompt Protocol Specification) research papers
 | Tasks per Domain | 20 |
 | Evaluation Metric | Goal Alignment Score (1–5, judged by DeepSeek-V3) |
 
+> **Note on overlap**: Paper 1 (ZH, A/B/C, 540 records) is a subset of Paper 2 (ZH, A/B/C/D, 720 records). Both are included so readers can reproduce each paper's results independently. The unique experimental count excluding this overlap is 5,400.
+
 ### Breakdown by Paper
 
-| Paper | Language | Models | Conditions | Records |
-|-------|----------|--------|-----------|---------|
-| Paper 1 | ZH | DeepSeek / Qwen / Kimi | A / B / C | 120 (travel domain) |
-| Paper 2 | EN + JA | DeepSeek / Qwen / Kimi | A / B / C | 1,080 |
-| Paper 3 | ZH + EN + JA | Claude / GPT-4o / Gemini | A / B / C / D / E / F | 3,240 |
-| **Total** | | **6 models** | | **4,440** |
+| Paper | Language | Models | Conditions | Records | arXiv |
+|-------|----------|--------|-----------|---------|-------|
+| Paper 1 | ZH | DeepSeek / Qwen / Kimi | A / B / C | **540** | [2603.18976](https://arxiv.org/abs/2603.18976) |
+| Paper 2 | ZH + EN + JA | DeepSeek / Qwen / Kimi | A / B / C / D | **2,160** | [2603.25379](https://arxiv.org/abs/2603.25379) |
+| Paper 3 | ZH + EN + JA | Claude / GPT-4o / Gemini | A / B / C / D / E / F | **3,240** | [2603.29953](https://arxiv.org/abs/2603.29953) |
 
 ---
 
@@ -46,9 +48,7 @@ This dataset accompanies the PPS (Prompt Protocol Specification) research papers
 | **E** | CO-STAR | Prompt structured using the CO-STAR framework |
 | **F** | RISEN | Prompt structured using the RISEN framework |
 
-The **D condition** prompts were generated using the [lateni.com](https://lateni.com) platform, which implements AI-assisted intent expansion based on the 5W3H framework. Each D-condition prompt contains all 8 dimensions (What / Why / Who / When / Where / How-to-do / How-much / How-feel) with PPS metadata including SHA-256 fingerprint and version.
-
-> Note: The lateni.com expansion algorithm is proprietary. The generated prompts are fully open.
+> Note: Conditions E and F are only in Paper 3. Condition D first appears in Paper 2.
 
 ---
 
@@ -56,18 +56,27 @@ The **D condition** prompts were generated using the [lateni.com](https://lateni
 
 ```
 dataset/
-├── README.md                   ← This file (English)
-├── README.zh.md                ← Chinese
-├── README.ja.md                ← Japanese
-├── README.ko.md                ← Korean
-├── README.es.md                ← Spanish
+├── README.md                          ← This file (English)
+├── README.zh.md                       ← Chinese
+├── README.ja.md                       ← Japanese
+├── README.ko.md                       ← Korean
+├── README.es.md                       ← Spanish
 ├── data/
-│   ├── pps_bench_zh.jsonl      ← 1,080 Chinese records
-│   ├── pps_bench_en.jsonl      ← 1,080 English records
-│   ├── pps_bench_ja.jsonl      ← 1,080 Japanese records
-│   └── pps_bench_full.jsonl    ← 3,240 all records combined
+│   ├── paper1/
+│   │   └── pps_bench_paper1.jsonl     ← 540 records (ZH, A/B/C)
+│   ├── paper2/
+│   │   ├── pps_bench_paper2_zh.jsonl  ← 720 records (ZH, A/B/C/D)
+│   │   ├── pps_bench_paper2_en.jsonl  ← 720 records (EN, A/B/C/D)
+│   │   ├── pps_bench_paper2_ja.jsonl  ← 720 records (JA, A/B/C/D)
+│   │   └── pps_bench_paper2.jsonl     ← 2,160 records (all langs)
+│   ├── paper3/
+│   │   ├── pps_bench_paper3_zh.jsonl  ← 1,080 records (ZH, A/B/C/D/E/F)
+│   │   ├── pps_bench_paper3_en.jsonl  ← 1,080 records (EN, A/B/C/D/E/F)
+│   │   ├── pps_bench_paper3_ja.jsonl  ← 1,080 records (JA, A/B/C/D/E/F)
+│   │   └── pps_bench_paper3.jsonl     ← 3,240 records (all langs)
+│   └── pps_bench_full.jsonl           ← 5,940 records (all papers, overlaps noted)
 └── statistics/
-    └── summary.json            ← Dataset metadata
+    └── summary.json                   ← Dataset metadata and per-paper stats
 ```
 
 ---
@@ -78,7 +87,8 @@ Each line in the JSONL files is one record:
 
 ```json
 {
-  "id": "zh-claude-travel-A-T01",
+  "id": "paper3-zh-claude-travel-A-T01",
+  "paper": "paper3",
   "lang": "zh",
   "model": "claude",
   "model_version": "claude-sonnet-4-20250514",
@@ -97,8 +107,9 @@ Each line in the JSONL files is one record:
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | string | Unique record identifier |
+| `paper` | string | Source paper: `paper1` / `paper2` / `paper3` |
 | `lang` | string | Language code: `zh` / `en` / `ja` |
-| `model` | string | Model name: `claude` / `gpt4o` / `gemini` |
+| `model` | string | Model name: `claude` / `gpt4o` / `gemini` / `deepseek` / `qwen` / `kimi` |
 | `model_version` | string | Exact model version used |
 | `condition` | string | Prompt condition: `A`–`F` |
 | `condition_name` | string | Human-readable condition name |
@@ -112,18 +123,21 @@ Each line in the JSONL files is one record:
 
 ---
 
-## Key Results
+## Key Results (Paper 3)
 
 | Condition | Grand Mean GA | Description |
 |-----------|--------------|-------------|
 | A | 4.463 | Baseline (simple prompt) |
-| B | 4.141 | Raw JSON — lowest, especially hurts weaker models |
+| B | 4.141 | Raw JSON — lowest, especially for weaker models |
 | C | 4.683 | Manual 5W3H |
 | D | 4.930 | AI-expanded 5W3H (PPS Full) |
 | E | 4.978 | CO-STAR |
 | F | 4.983 | RISEN |
 
-**Notable finding**: Structured prompts (D/E/F) reduce cross-language score variance by up to 24× (σ: 0.470 → 0.020), demonstrating language-agnostic intent transmission.
+**Key findings** (Paper 3, arXiv:2603.29953):
+- Structured prompts (D/E/F) reduce cross-language score variance by up to **24×** (σ: 0.470 → 0.020)
+- Weak-model compensation: Gemini gains +1.006, Claude gains +0.217 (D vs. A)
+- D ≈ E ≈ F under TOST equivalence testing (δ=0.2, all p<0.001)
 
 ---
 
@@ -132,15 +146,15 @@ Each line in the JSONL files is one record:
 ```python
 import json
 
-# Load Chinese records
+# Load Paper 3 records
 records = []
-with open("data/pps_bench_zh.jsonl", encoding="utf-8") as f:
+with open("data/paper3/pps_bench_paper3.jsonl", encoding="utf-8") as f:
     for line in f:
         records.append(json.loads(line))
 
 # Compare conditions for same task
-task = [r for r in records if r["pair_id"] == "T01" and r["model"] == "claude"]
-for r in task:
+task = [r for r in records if r["pair_id"] == "T01" and r["model"] == "claude" and r["lang"] == "zh"]
+for r in sorted(task, key=lambda x: x["condition"]):
     print(f"Condition {r['condition']}: GA={r['goal_alignment']} | {r['prompt'][:60]}...")
 ```
 
@@ -150,8 +164,9 @@ import pandas as pd
 # Load full dataset
 df = pd.read_json("data/pps_bench_full.jsonl", lines=True)
 
-# Average GA by condition and model
-pivot = df.groupby(["condition", "model"])["goal_alignment"].mean().unstack()
+# Average GA by condition (Paper 3 only)
+p3 = df[df["paper"] == "paper3"]
+pivot = p3.groupby(["condition", "model"])["goal_alignment"].mean().unstack()
 print(pivot)
 ```
 
@@ -159,15 +174,36 @@ print(pivot)
 
 ## Citation
 
-If you use PPS-Bench in your research, please cite:
+If you use PPS-Bench in your research, please cite the relevant paper(s):
 
 ```bibtex
+@article{peng2026structured,
+  title   = {Structured Intent as a Protocol-Like Communication Layer: Cross-Model Robustness, Framework Comparison, and the Weak-Model Compensation Effect},
+  author  = {Peng, Gang},
+  journal = {arXiv preprint arXiv:2603.29953},
+  year    = {2026}
+}
+
+@article{peng2026does,
+  title   = {Does Structured Intent Representation Generalize? A Cross-Language, Cross-Model Empirical Study of 5W3H Prompting},
+  author  = {Peng, Gang},
+  journal = {arXiv preprint arXiv:2603.25379},
+  year    = {2026}
+}
+
+@article{peng2026evaluating,
+  title   = {Evaluating 5W3H Structured Prompting for Intent Alignment in Human-AI Interaction},
+  author  = {Peng, Gang},
+  journal = {arXiv preprint arXiv:2603.18976},
+  year    = {2026}
+}
+
 @dataset{pps_bench_2026,
-  title     = {PPS-Bench: A Multilingual Parallel Prompt Dataset for Intent Alignment Research},
-  author    = {[Author]},
-  year      = {2026},
-  url       = {https://github.com/PGlarry/prompt-protocol-specification},
-  note      = {3,240 records across 3 languages, 6 prompt conditions, 3 AI models}
+  title  = {PPS-Bench: A Multilingual Parallel Prompt Dataset for Intent Alignment Research},
+  author = {Peng, Gang},
+  year   = {2026},
+  url    = {https://github.com/PGlarry/prompt-protocol-specification},
+  note   = {5,940 records (5,400 unique) across 3 papers, 3 languages, 6 conditions, 6 models}
 }
 ```
 

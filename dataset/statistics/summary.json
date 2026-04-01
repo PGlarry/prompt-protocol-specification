@@ -1,71 +1,84 @@
 {
-  "name": "PPS-Bench",
-  "version": "1.0.0",
-  "total_records": 4440,
-  "breakdown": {
-    "paper1_zh_travel": 120,
-    "paper2_en": 540,
-    "paper2_ja": 540,
-    "paper3_zh_en_ja": 3240
-  },
-  "languages": [
-    "zh",
-    "en",
-    "ja"
-  ],
-  "models": {
-    "paper1_2": [
-      "deepseek",
-      "qwen",
-      "kimi"
-    ],
-    "paper3": [
-      "claude",
-      "gpt4o",
-      "gemini"
-    ]
-  },
-  "model_versions": {
-    "deepseek": "deepseek-chat",
-    "qwen": "qwen-max",
-    "kimi": "moonshot-v1-8k",
-    "claude": "claude-sonnet-4-20250514",
-    "gpt4o": "gpt-4o",
-    "gemini": "gemini-2.5-pro"
-  },
-  "conditions": {
-    "paper1_2": [
-      "A",
-      "B",
-      "C"
-    ],
-    "paper3": [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "F"
-    ]
-  },
-  "condition_names": {
-    "A": "Simple Prompt",
-    "B": "Structured JSON (PPS Raw)",
-    "C": "Manual 5W3H (Natural Language)",
-    "D": "AI-Expanded 5W3H (PPS Full, via lateni.com)",
-    "E": "CO-STAR",
-    "F": "RISEN"
-  },
-  "domains": [
-    "travel",
-    "business",
-    "technical"
-  ],
-  "tasks_per_domain": 20,
-  "evaluation_metric": "goal_alignment (1-5, judged by DeepSeek-V3)",
-  "papers": [
-    "Paper 1: PPS in Chinese Tasks (DeepSeek/Qwen/Kimi, ZH, A/B/C)",
-    "Paper 2: Cross-Language Generalization (DeepSeek/Qwen/Kimi, EN, A/B/C)",
-    "Paper 3: Cross-Model Robustness (Claude/GPT-4o/Gemini, ZH+EN+JA, A/B/C/D/E/F)"
-  ]
+  "version": "2.0",
+  "created": "2026-03-31",
+  "total_records_with_overlaps": 5940,
+  "unique_records_no_overlap": 5400,
+  "overlap_note": "Paper 1 ZH A/B/C (540 records) is a subset of Paper 2 ZH A/B/C/D (720 records). Both are included for per-paper reproducibility.",
+  "papers": {
+    "paper1": {
+      "title": "PPS: Structured Intent Representation for Human-AI Interaction via 5W3H Prompt Protocol",
+      "arxiv": "2603.18976",
+      "languages": [
+        "zh"
+      ],
+      "models": [
+        "deepseek",
+        "qwen",
+        "kimi"
+      ],
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "records": 540,
+      "file": "paper1/pps_bench_paper1.jsonl"
+    },
+    "paper2": {
+      "title": "Does Structured Intent Representation Generalize? A Cross-Language, Cross-Model Empirical Study of 5W3H Prompting",
+      "arxiv": "pending",
+      "languages": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "models": [
+        "deepseek",
+        "qwen",
+        "kimi"
+      ],
+      "conditions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": 2160,
+      "files": {
+        "zh": "paper2/pps_bench_paper2_zh.jsonl",
+        "en": "paper2/pps_bench_paper2_en.jsonl",
+        "ja": "paper2/pps_bench_paper2_ja.jsonl",
+        "all": "paper2/pps_bench_paper2.jsonl"
+      }
+    },
+    "paper3": {
+      "title": "Structured Intent as a Protocol-Like Communication Layer: Cross-Model Robustness, Framework Comparison, and the Weak-Model Compensation Effect",
+      "arxiv": "2603.29953",
+      "languages": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "models": [
+        "claude",
+        "gpt4o",
+        "gemini"
+      ],
+      "conditions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "records": 3240,
+      "files": {
+        "zh": "paper3/pps_bench_paper3_zh.jsonl",
+        "en": "paper3/pps_bench_paper3_en.jsonl",
+        "ja": "paper3/pps_bench_paper3_ja.jsonl",
+        "all": "paper3/pps_bench_paper3.jsonl"
+      }
+    }
+  }
 }
