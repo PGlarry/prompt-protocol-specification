@@ -6,7 +6,7 @@
 
 ## Descripción General
 
-PPS-Bench es un conjunto de datos de referencia multilingüe y abierto para investigar la **transmisión estructurada de intención en la interacción humano-IA**. Proporciona prompts paralelos en 3 idiomas, 6 formatos de prompt, 3 modelos de IA y 3 dominios de tareas, con puntuaciones de alineación de objetivos (GA) para cada registro.
+PPS-Bench es un conjunto de datos de referencia multilingüe y abierto para investigar la **transmisión estructurada de intención en la interacción humano-IA**. Proporciona prompts paralelos en 3 idiomas, múltiples condiciones de prompt y configuraciones de ablación, 6 modelos de IA y 3 dominios de tarea, con puntuaciones de alineación de objetivos (GA) para cada registro. Paper 4 también incluye s-ICMw y DS.
 
 ---
 
@@ -14,13 +14,14 @@ PPS-Bench es un conjunto de datos de referencia multilingüe y abierto para inve
 
 | Dimensión | Detalles |
 |-----------|---------|
-| Total de Registros | **4,440** |
+| Total de Registros (con solapamientos) | **8,820** |
+| Registros Experimentales Únicos | **8,280** |
 | Idiomas | ZH (Chino), EN (Inglés), JA (Japonés) |
-| Condiciones de Prompt | 6 (A / B / C / D / E / F) |
-| Modelos de IA | Claude (claude-sonnet-4-20250514), GPT-4o, Gemini 2.5 Pro |
+| Condiciones de Prompt | 6 (A / B / C / D / E / F) + condiciones de ablación de Paper 4 |
+| Modelos de IA | Claude, GPT-4o, Gemini 2.5 Pro, DeepSeek, Qwen, Kimi |
 | Dominios de Tarea | Viajes, Negocios, Técnico |
 | Tareas por Dominio | 20 |
-| Métrica de Evaluación | Puntuación de Alineación de Objetivos (1-5, evaluado por DeepSeek-V3) |
+| Métrica de Evaluación | Puntuación de Alineación de Objetivos (1-5, evaluado por DeepSeek-V3); Paper 4 también incluye s-ICMw y DS |
 
 ---
 
@@ -37,15 +38,28 @@ PPS-Bench es un conjunto de datos de referencia multilingüe y abierto para inve
 
 ---
 
+## Condiciones de Ablación de Paper 4
+
+Paper 4 se publica como un paquete independiente e incluye `FULL` y 7 condiciones de eliminación de dimensión:
+`-why`, `-who`, `-when`, `-where`, `-how_to_do`, `-how_much` y `-how_feel`.
+Solo se publican los datos usados directamente en Paper 4; los artefactos `v2` y los análisis reservados para el futuro paper teórico IST quedan excluidos por ahora.
+
+---
+
 ## Estructura de Archivos
 
 ```
 dataset/
 ├── data/
-│   ├── pps_bench_zh.jsonl      ← 1,080 registros en chino
-│   ├── pps_bench_en.jsonl      ← 1,080 registros en inglés
-│   ├── pps_bench_ja.jsonl      ← 1,080 registros en japonés
-│   └── pps_bench_full.jsonl    ← 3,240 registros completos
+│   ├── paper1/
+│   ├── paper2/
+│   ├── paper3/
+│   ├── paper4/
+│   │   ├── pps_bench_paper4_zh.jsonl  ← 1,440 registros en chino
+│   │   ├── pps_bench_paper4_en.jsonl  ← 720 registros en inglés
+│   │   ├── pps_bench_paper4_ja.jsonl  ← 720 registros en japonés
+│   │   └── pps_bench_paper4.jsonl     ← 2,880 registros
+│   └── pps_bench_full.jsonl           ← 8,820 registros completos
 └── statistics/
     └── summary.json
 ```
@@ -74,7 +88,8 @@ dataset/
   title     = {PPS-Bench: A Multilingual Parallel Prompt Dataset for Intent Alignment Research},
   author    = {[Autor]},
   year      = {2026},
-  url       = {https://github.com/PGlarry/prompt-protocol-specification}
+  url       = {https://github.com/PGlarry/prompt-protocol-specification},
+  note      = {8,820 registros (8,280 únicos) en 4 artículos}
 }
 ```
 

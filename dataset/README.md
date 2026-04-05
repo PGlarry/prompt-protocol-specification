@@ -6,9 +6,9 @@
 
 ## Overview
 
-PPS-Bench is an open multilingual benchmark dataset designed for research on **structured intent transmission in human-AI interaction**. It provides parallel prompts across 3 languages, 6 prompt formats, 6 AI models, and 3 task domains — each with a goal alignment (GA) evaluation score.
+PPS-Bench is an open multilingual benchmark dataset designed for research on **structured intent transmission in human-AI interaction**. It provides parallel prompts across 3 languages, multiple prompt conditions and ablation settings, 6 AI models, and 3 task domains. Records include goal alignment (GA) evaluation scores, and Paper 4 additionally includes structural coverage and deficiency annotations.
 
-This dataset accompanies a three-paper series on the PPS (Prompt Protocol Specification) / 5W3H framework. Data is organized **by paper** so readers can independently verify each paper's results.
+This dataset accompanies a multi-paper PPS (Prompt Protocol Specification) / 5W3H research series. Data is organized **by paper** so readers can independently verify each paper's results.
 
 ---
 
@@ -16,16 +16,16 @@ This dataset accompanies a three-paper series on the PPS (Prompt Protocol Specif
 
 | Dimension | Details |
 |-----------|---------|
-| Total Records (with paper overlaps) | **5,940** |
-| Unique Experimental Records | **5,400** |
+| Total Records (with paper overlaps) | **8,820** |
+| Unique Experimental Records | **8,280** |
 | Languages | ZH (Chinese), EN (English), JA (Japanese) |
-| Prompt Conditions | A / B / C / D / E / F (see table below) |
+| Prompt Conditions | A / B / C / D / E / F + Paper 4 ablation conditions |
 | AI Models | Claude, GPT-4o, Gemini 2.5 Pro, DeepSeek, Qwen, Kimi |
 | Task Domains | Travel, Business, Technical |
 | Tasks per Domain | 20 |
-| Evaluation Metric | Goal Alignment Score (1–5, judged by DeepSeek-V3) |
+| Evaluation Metric | Goal Alignment Score (1–5, judged by DeepSeek-V3); Paper 4 also includes s-ICMw and DS |
 
-> **Note on overlap**: Paper 1 (ZH, A/B/C, 540 records) is a subset of Paper 2 (ZH, A/B/C/D, 720 records). Both are included so readers can reproduce each paper's results independently. The unique experimental count excluding this overlap is 5,400.
+> **Note on overlap**: Paper 1 (ZH, A/B/C, 540 records) is a subset of Paper 2 (ZH, A/B/C/D, 720 records). Both are included so readers can reproduce each paper's results independently. The unique experimental count excluding this overlap is 8,280 after adding Paper 4.
 
 ### Breakdown by Paper
 
@@ -34,6 +34,7 @@ This dataset accompanies a three-paper series on the PPS (Prompt Protocol Specif
 | Paper 1 | ZH | DeepSeek / Qwen / Kimi | A / B / C | **540** | [2603.18976](https://arxiv.org/abs/2603.18976) |
 | Paper 2 | ZH + EN + JA | DeepSeek / Qwen / Kimi | A / B / C / D | **2,160** | [2603.25379](https://arxiv.org/abs/2603.25379) |
 | Paper 3 | ZH + EN + JA | Claude / GPT-4o / Gemini | A / B / C / D / E / F | **3,240** | [2603.29953](https://arxiv.org/abs/2603.29953) |
+| Paper 4 | ZH + EN + JA | ZH: DeepSeek / Qwen / Kimi / Claude / GPT-4o / Gemini; EN+JA: Claude / GPT-4o / Gemini | FULL / -why / -who / -when / -where / -how_to_do / -how_much / -how_feel | **2,880** | pending |
 
 ---
 
@@ -49,6 +50,25 @@ This dataset accompanies a three-paper series on the PPS (Prompt Protocol Specif
 | **F** | RISEN | Prompt structured using the RISEN framework |
 
 > Note: Conditions E and F are only in Paper 3. Condition D first appears in Paper 2.
+
+---
+
+## Paper 4 Ablation Conditions
+
+Paper 4 releases a separate ablation dataset for testing **task-conditioned dimensional weighting** under single-dimension removal. Each task-model pair contains 8 records:
+
+| Condition | Meaning |
+|-----------|---------|
+| `FULL` | Full 8-dimension prompt |
+| `-why` | Remove `Why` |
+| `-who` | Remove `Who` |
+| `-when` | Remove `When` |
+| `-where` | Remove `Where` |
+| `-how_to_do` | Remove `How-to-do` |
+| `-how_much` | Remove `How-much` |
+| `-how_feel` | Remove `How-feel` |
+
+Paper 4 includes only the data directly used in the paper: prompts, outputs, and **v1 structural scores** (`goal_alignment`, `icmw_v1`, `ds`). Fidelity-oriented `v2` artifacts and future IST-only analysis files are intentionally excluded and will be released separately with the future theory paper.
 
 ---
 
@@ -74,7 +94,12 @@ dataset/
 │   │   ├── pps_bench_paper3_en.jsonl  ← 1,080 records (EN, A/B/C/D/E/F)
 │   │   ├── pps_bench_paper3_ja.jsonl  ← 1,080 records (JA, A/B/C/D/E/F)
 │   │   └── pps_bench_paper3.jsonl     ← 3,240 records (all langs)
-│   └── pps_bench_full.jsonl           ← 5,940 records (all papers, overlaps noted)
+│   ├── paper4/
+│   │   ├── pps_bench_paper4_zh.jsonl  ← 1,440 records (ZH, 6 models, 8 ablation conditions)
+│   │   ├── pps_bench_paper4_en.jsonl  ← 720 records (EN, 3 models, 8 ablation conditions)
+│   │   ├── pps_bench_paper4_ja.jsonl  ← 720 records (JA, 3 models, 8 ablation conditions)
+│   │   └── pps_bench_paper4.jsonl     ← 2,880 records (all langs)
+│   └── pps_bench_full.jsonl           ← 8,820 records (all papers, overlaps noted)
 └── statistics/
     └── summary.json                   ← Dataset metadata and per-paper stats
 ```
@@ -107,7 +132,7 @@ Each line in the JSONL files is one record:
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | string | Unique record identifier |
-| `paper` | string | Source paper: `paper1` / `paper2` / `paper3` |
+| `paper` | string | Source paper: `paper1` / `paper2` / `paper3` / `paper4` |
 | `lang` | string | Language code: `zh` / `en` / `ja` |
 | `model` | string | Model name: `claude` / `gpt4o` / `gemini` / `deepseek` / `qwen` / `kimi` |
 | `model_version` | string | Exact model version used |
@@ -120,6 +145,48 @@ Each line in the JSONL files is one record:
 | `output` | string | Model response |
 | `goal_alignment` | int | GA score: 1–5 (5 = perfect alignment) |
 | `ga_reasoning` | string | Judge's reasoning for the GA score |
+
+Paper 4 records extend the base schema with additional ablation-specific fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `experiment` | string | `dimensional_ablation` |
+| `judge_model` | string | Judge model used for scoring (`deepseek-chat`) |
+| `metric_version` | string | Released metric version (`v1`) |
+| `metric_name` | string | `s-ICMw` |
+| `removed_dim` | string or null | Removed dimension for ablation conditions |
+| `simple_prompt` | string | Seed prompt or task goal used to construct the structured prompt |
+| `icmw_v1` | number | Structural weighted intent coverage score |
+| `icm_v1` | object | Per-dimension structural coverage annotations |
+| `ds` | number or null | Deficiency Signature score |
+| `ds_reasoning` | string | Judge reasoning for the DS label |
+
+---
+
+### Paper 4 Example Record
+
+```json
+{
+  "id": "paper4-en-claude-B01-FULL",
+  "paper": "paper4",
+  "experiment": "dimensional_ablation",
+  "lang": "en",
+  "model": "claude",
+  "model_version": "claude-sonnet-4-20250514",
+  "judge_model": "deepseek-chat",
+  "metric_version": "v1",
+  "metric_name": "s-ICMw",
+  "condition": "FULL",
+  "condition_name": "Full 8-Dimension Prompt",
+  "removed_dim": null,
+  "domain": "business",
+  "pair_id": "B01",
+  "simple_prompt": "Task Goal (What): Analyze the competitive landscape of China's electric vehicle market in 2024; KPIs: Cover top 5 brands",
+  "goal_alignment": 5,
+  "icmw_v1": 0.675,
+  "ds": null
+}
+```
 
 ---
 
@@ -198,14 +265,26 @@ If you use PPS-Bench in your research, please cite the relevant paper(s):
   year    = {2026}
 }
 
+@article{peng2026ablation,
+  title   = {Dimensional Ablation Reveals a Split Between Structural Recovery and Intent Fidelity in LLM Alignment},
+  author  = {Peng, Gang},
+  journal = {arXiv preprint},
+  year    = {2026},
+  note    = {Paper 4 dataset release: 2,880 records across ZH/EN/JA with 8 ablation conditions}
+}
+
 @dataset{pps_bench_2026,
   title  = {PPS-Bench: A Multilingual Parallel Prompt Dataset for Intent Alignment Research},
   author = {Peng, Gang},
   year   = {2026},
   url    = {https://github.com/PGlarry/prompt-protocol-specification},
-  note   = {5,940 records (5,400 unique) across 3 papers, 3 languages, 6 conditions, 6 models}
+  note   = {8,820 records (8,280 unique) across 4 papers, 3 languages, prompt conditions plus Paper 4 ablation settings, and 6 models}
 }
 ```
+
+If you use only the Paper 4 ablation subset, please also mention:
+- `dataset/data/paper4/pps_bench_paper4.jsonl`
+- Metric release scope: `v1 structural scores only`
 
 ---
 

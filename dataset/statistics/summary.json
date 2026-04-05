@@ -1,9 +1,9 @@
 {
-  "version": "2.0",
-  "created": "2026-03-31",
-  "total_records_with_overlaps": 5940,
-  "unique_records_no_overlap": 5400,
-  "overlap_note": "Paper 1 ZH A/B/C (540 records) is a subset of Paper 2 ZH A/B/C/D (720 records). Both are included for per-paper reproducibility.",
+  "version": "2.1",
+  "created": "2026-04-05",
+  "total_records_with_overlaps": 8820,
+  "unique_records_no_overlap": 8280,
+  "overlap_note": "Paper 1 ZH A/B/C (540 records) is a subset of Paper 2 ZH A/B/C/D (720 records). Both are included for per-paper reproducibility. Paper 4 introduces a separate ablation dataset and does not overlap with Papers 1-3.",
   "papers": {
     "paper1": {
       "title": "PPS: Structured Intent Representation for Human-AI Interaction via 5W3H Prompt Protocol",
@@ -79,6 +79,58 @@
         "ja": "paper3/pps_bench_paper3_ja.jsonl",
         "all": "paper3/pps_bench_paper3.jsonl"
       }
+    },
+    "paper4": {
+      "title": "Dimensional Ablation Reveals a Split Between Structural Recovery and Intent Fidelity in LLM Alignment",
+      "arxiv": "pending",
+      "languages": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "models": {
+        "zh": [
+          "deepseek",
+          "qwen",
+          "kimi",
+          "claude",
+          "gpt4o",
+          "gemini"
+        ],
+        "en": [
+          "claude",
+          "gpt4o",
+          "gemini"
+        ],
+        "ja": [
+          "claude",
+          "gpt4o",
+          "gemini"
+        ]
+      },
+      "conditions": [
+        "FULL",
+        "-why",
+        "-who",
+        "-when",
+        "-where",
+        "-how_to_do",
+        "-how_much",
+        "-how_feel"
+      ],
+      "records": 2880,
+      "files": {
+        "zh": "paper4/pps_bench_paper4_zh.jsonl",
+        "en": "paper4/pps_bench_paper4_en.jsonl",
+        "ja": "paper4/pps_bench_paper4_ja.jsonl",
+        "all": "paper4/pps_bench_paper4.jsonl"
+      },
+      "metrics": [
+        "goal_alignment",
+        "icmw_v1",
+        "ds"
+      ],
+      "release_scope": "paper4_direct_only"
     }
   }
 }

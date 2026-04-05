@@ -16,22 +16,24 @@ PPS-Bench 是一个用于研究**人-AI交互中结构化意图传递**的开放
 
 | 维度 | 详情 |
 |------|------|
-| 总记录数 | **4,440 条** |
+| 总记录数（含重叠） | **8,820 条** |
+| 唯一实验记录数 | **8,280 条** |
 | 语言 | ZH（中文）、EN（英文）、JA（日文） |
-| 提示词条件 | A / B / C / D / E / F（共6种） |
+| 提示词条件 | A / B / C / D / E / F + Paper 4 单维消融条件 |
 | AI 模型 | Claude、GPT-4o、Gemini 2.5 Pro、DeepSeek、Qwen、Kimi |
 | 任务领域 | 旅行、商务、技术 |
 | 每领域任务数 | 20 条 |
-| 评估指标 | 意图对齐分数（1-5分，由 DeepSeek-V3 评判） |
+| 评估指标 | 意图对齐分数（1-5分，由 DeepSeek-V3 评判）；Paper 4 另含 s-ICMw 与 DS |
 
 ### 按论文分类
 
 | 论文 | 语言 | 模型 | 条件 | 记录数 |
 |------|------|------|------|--------|
-| 论文1 | ZH | DeepSeek / Qwen / Kimi | A / B / C | 120（旅行领域） |
-| 论文2 | EN + JA | DeepSeek / Qwen / Kimi | A / B / C | 1,080 |
+| 论文1 | ZH | DeepSeek / Qwen / Kimi | A / B / C | 540 |
+| 论文2 | ZH + EN + JA | DeepSeek / Qwen / Kimi | A / B / C / D | 2,160 |
 | 论文3 | ZH + EN + JA | Claude / GPT-4o / Gemini | A / B / C / D / E / F | 3,240 |
-| **合计** | | **6个模型** | | **4,440** |
+| 论文4 | ZH + EN + JA | 中文：DeepSeek / Qwen / Kimi / Claude / GPT-4o / Gemini；英日：Claude / GPT-4o / Gemini | FULL / -why / -who / -when / -where / -how_to_do / -how_much / -how_feel | 2,880 |
+| **合计** | | **6个模型** | | **8,820** |
 
 ---
 
@@ -52,6 +54,23 @@ PPS-Bench 是一个用于研究**人-AI交互中结构化意图传递**的开放
 
 ---
 
+## Paper 4 单维消融条件
+
+Paper 4 公开的是单独的数据包，用于验证单维删除下的结构性意图损耗。每个 task-model 组合包含 8 条记录：
+
+- `FULL`
+- `-why`
+- `-who`
+- `-when`
+- `-where`
+- `-how_to_do`
+- `-how_much`
+- `-how_feel`
+
+本次仅公开 Paper 4 直接使用的数据：prompt、output，以及 `v1` 结构评分（`goal_alignment`、`icmw_v1`、`ds`）。`v2` 忠实度评分及未来 IST 理论论文专用分析暂不公开。
+
+---
+
 ## 文件结构
 
 ```
@@ -62,10 +81,15 @@ dataset/
 ├── README.ko.md                ← 韩文说明
 ├── README.es.md                ← 西班牙文说明
 ├── data/
-│   ├── pps_bench_zh.jsonl      ← 1,080 条中文记录
-│   ├── pps_bench_en.jsonl      ← 1,080 条英文记录
-│   ├── pps_bench_ja.jsonl      ← 1,080 条日文记录
-│   └── pps_bench_full.jsonl    ← 3,240 条完整数据
+│   ├── paper1/
+│   ├── paper2/
+│   ├── paper3/
+│   ├── paper4/
+│   │   ├── pps_bench_paper4_zh.jsonl  ← 1,440 条中文记录
+│   │   ├── pps_bench_paper4_en.jsonl  ← 720 条英文记录
+│   │   ├── pps_bench_paper4_ja.jsonl  ← 720 条日文记录
+│   │   └── pps_bench_paper4.jsonl     ← 2,880 条完整记录
+│   └── pps_bench_full.jsonl           ← 8,820 条完整数据
 └── statistics/
     └── summary.json            ← 数据集元信息
 ```
@@ -109,6 +133,33 @@ JSONL 文件每行为一条记录：
 | `output` | 字符串 | 模型输出内容 |
 | `goal_alignment` | 整数 | 意图对齐分数：1–5（5=完美对齐） |
 | `ga_reasoning` | 字符串 | 评判模型的评分理由 |
+
+---
+
+### Paper 4 记录示例
+
+```json
+{
+  "id": "paper4-en-claude-B01-FULL",
+  "paper": "paper4",
+  "experiment": "dimensional_ablation",
+  "lang": "en",
+  "model": "claude",
+  "model_version": "claude-sonnet-4-20250514",
+  "judge_model": "deepseek-chat",
+  "metric_version": "v1",
+  "metric_name": "s-ICMw",
+  "condition": "FULL",
+  "condition_name": "Full 8-Dimension Prompt",
+  "removed_dim": null,
+  "domain": "business",
+  "pair_id": "B01",
+  "simple_prompt": "Task Goal (What): Analyze the competitive landscape of China's electric vehicle market in 2024; KPIs: Cover top 5 brands",
+  "goal_alignment": 5,
+  "icmw_v1": 0.675,
+  "ds": null
+}
+```
 
 ---
 
@@ -167,9 +218,20 @@ print(pivot)
   author    = {[作者]},
   year      = {2026},
   url       = {https://github.com/PGlarry/prompt-protocol-specification},
-  note      = {3,240条记录，涵盖3种语言、6种提示词条件、3个AI模型}
+  note      = {8,820条记录（唯一 8,280 条），涵盖4篇论文、3种语言、多种提示词条件与消融设置}
+}
+
+@article{peng2026ablation,
+  title     = {Dimensional Ablation Reveals a Split Between Structural Recovery and Intent Fidelity in LLM Alignment},
+  author    = {Peng, Gang},
+  year      = {2026},
+  note      = {Paper 4 数据集：2,880 条记录，含 8 种单维消融条件}
 }
 ```
+
+如果只使用 Paper 4 数据子集，建议同时注明：
+- `dataset/data/paper4/pps_bench_paper4.jsonl`
+- 当前公开的是 `v1` 结构评分版本
 
 ---
 
