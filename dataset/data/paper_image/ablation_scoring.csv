@@ -1,0 +1,25 @@
+stage,task_id,task_type,model_pool,ablated_dim,condition,delta_fICMw,fICMw_full,fICMw_ablated,most_sensitive_dim
+expA,T04,low_ambiguity_control,3-model pooled,why,ABL_WHY,+0.055,,,
+expA,T04,low_ambiguity_control,3-model pooled,who,ABL_WHO,-0.011,,,
+expA,T04,low_ambiguity_control,3-model pooled,howfeel,ABL_HOWFEEL,-0.013,,,
+expA,T04,low_ambiguity_control,3-model pooled,howmuch,ABL_HOWMUCH,+0.023,,,Why
+expA,T05,high_ambiguity_high_gain,3-model pooled,why,ABL_WHY,+0.182,,,
+expA,T05,high_ambiguity_high_gain,3-model pooled,who,ABL_WHO,+0.023,,,
+expA,T05,high_ambiguity_high_gain,3-model pooled,howfeel,ABL_HOWFEEL,-0.008,,,
+expA,T05,high_ambiguity_high_gain,3-model pooled,howmuch,ABL_HOWMUCH,+0.096,,,Why
+expA,T08,complexity_limit_candidate,3-model pooled,why,ABL_WHY,-0.094,,,
+expA,T08,complexity_limit_candidate,3-model pooled,who,ABL_WHO,-0.065,,,
+expA,T08,complexity_limit_candidate,3-model pooled,howfeel,ABL_HOWFEEL,-0.133,,,
+expA,T08,complexity_limit_candidate,3-model pooled,howmuch,ABL_HOWMUCH,+0.057,,,HowMuch_anomaly
+expA,T10,high_complexity_standard,3-model pooled,why,ABL_WHY,+0.094,,,
+expA,T10,high_complexity_standard,3-model pooled,who,ABL_WHO,+0.079,,,
+expA,T10,high_complexity_standard,3-model pooled,howfeel,ABL_HOWFEEL,+0.029,,,
+expA,T10,high_complexity_standard,3-model pooled,howmuch,ABL_HOWMUCH,+0.091,,,Why_approx_HowMuch
+expA,T11,low_ambiguity_control,3-model pooled,why,ABL_WHY,+0.000,,,
+expA,T11,low_ambiguity_control,3-model pooled,who,ABL_WHO,-0.010,,,
+expA,T11,low_ambiguity_control,3-model pooled,howfeel,ABL_HOWFEEL,-0.015,,,
+expA,T11,low_ambiguity_control,3-model pooled,howmuch,ABL_HOWMUCH,+0.011,,,None
+expA,T12,mid_complexity_bridge,3-model pooled,why,ABL_WHY,+0.008,,,
+expA,T12,mid_complexity_bridge,3-model pooled,who,ABL_WHO,+0.031,,,
+expA,T12,mid_complexity_bridge,3-model pooled,howfeel,ABL_HOWFEEL,+0.016,,,
+expA,T12,mid_complexity_bridge,3-model pooled,howmuch,ABL_HOWMUCH,+0.034,,,HowMuch

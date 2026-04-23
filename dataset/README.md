@@ -35,6 +35,9 @@ This dataset accompanies a multi-paper PPS (Prompt Protocol Specification) / 5W3
 | Paper 2 | ZH + EN + JA | DeepSeek / Qwen / Kimi | A / B / C / D | **2,160** | [2603.25379](https://arxiv.org/abs/2603.25379) |
 | Paper 3 | ZH + EN + JA | Claude / GPT-4o / Gemini | A / B / C / D / E / F | **3,240** | [2603.29953](https://arxiv.org/abs/2603.29953) |
 | Paper 4 | ZH + EN + JA | ZH: DeepSeek / Qwen / Kimi / Claude / GPT-4o / Gemini; EN+JA: Claude / GPT-4o / Gemini | FULL / -why / -who / -when / -where / -how_to_do / -how_much / -how_feel | **2,880** | pending |
+| **Paper Image** | ZH (T2I) | Wanx / CogView / DoubaoImage | A, C, D; ablation; Why variants; density; AI-opt | **1,296 images / 324 cells** | pending (Neurocomputing) |
+
+> **Note on Paper Image:** This paper tests PPS/5W3H cross-modal transfer to neural text-to-image generation. Its data is image-level scoring aggregates (CSV format, not JSONL prompts). See [`data/paper_image/`](data/paper_image/).
 
 ---
 
@@ -99,7 +102,24 @@ dataset/
 │   │   ├── pps_bench_paper4_en.jsonl  ← 720 records (EN, 3 models, 8 ablation conditions)
 │   │   ├── pps_bench_paper4_ja.jsonl  ← 720 records (JA, 3 models, 8 ablation conditions)
 │   │   └── pps_bench_paper4.jsonl     ← 2,880 records (all langs)
-│   └── pps_bench_full.jsonl           ← 8,820 records (all papers, overlaps noted)
+│   ├── paper_image/                   ← Cross-modal T2I study (Neurocomputing, under review)
+│   │   ├── README.md                  ← Full description of image paper dataset
+│   │   ├── pilot_scoring.csv          ← Stage 0: sICMw/fICMw/gap by task×condition (18 cells)
+│   │   ├── ablation_scoring.csv       ← Exp A: ΔfICMw by task×dimension (24 cells)
+│   │   ├── why_decomposition_scoring.csv ← Exp C: fICMw by task×Why-variant (pooled + per-model)
+│   │   ├── density_scoring.csv        ← Exp D: fICMw by task×density (pooled + per-model)
+│   │   ├── optimization_scoring.csv   ← Exp D-opt: AI-optimized variants (negative result)
+│   │   ├── pairwise_comparisons.csv   ← All primary contrasts with CI and Cohen's d
+│   │   └── compute_stats.py           ← Reproduction analysis script
+│   └── pps_bench_full.jsonl           ← 8,820 records (all text papers, overlaps noted)
+├── figures/
+│   └── paper_image/                   ← Figures 1–6 for the Neurocomputing paper
+│       ├── fig1.png  ← Study design overview
+│       ├── fig2.png  ← Pilot baseline fICMw and structural gap
+│       ├── fig3.png  ← Dimensional ablation heatmap (Exp A)
+│       ├── fig4.png  ← Why-decomposition two-panel chart (Exp C)
+│       ├── fig5.png  ← Density profiles for all five tasks (Exp D)
+│       └── fig6.png  ← Cross-experiment convergence table (T05 vs T08)
 └── statistics/
     └── summary.json                   ← Dataset metadata and per-paper stats
 ```

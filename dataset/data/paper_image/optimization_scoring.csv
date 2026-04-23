@@ -1,0 +1,21 @@
+stage,task_id,task_type,model_pool,condition,fICMw,beats_condition_c,beats_d0_base,notes
+expD_opt,T05,high_ambiguity_standard,Wanx+CogView pooled,C,0.984,reference,,manual PPS
+expD_opt,T05,high_ambiguity_standard,Wanx+CogView pooled,D0_BASE,0.978,No,,AI-expanded baseline
+expD_opt,T05,high_ambiguity_standard,Wanx+CogView pooled,D_OPT1,0.921,No,No,AI-optimized variant 1
+expD_opt,T05,high_ambiguity_standard,Wanx+CogView pooled,D_OPT2,0.938,No,No,AI-optimized variant 2
+expD_opt,T05,high_ambiguity_standard,Wanx+CogView pooled,D_OPT3,0.944,No,No,AI-optimized variant 3
+expD_opt,T08,specification_overload,Wanx+CogView pooled,C,0.773,reference,,manual PPS
+expD_opt,T08,specification_overload,Wanx+CogView pooled,D0_BASE,0.761,No,,AI-expanded baseline
+expD_opt,T08,specification_overload,Wanx+CogView pooled,D_OPT1,0.742,No,No,AI-optimized variant 1
+expD_opt,T08,specification_overload,Wanx+CogView pooled,D_OPT2,0.756,No,No,AI-optimized variant 2
+expD_opt,T08,specification_overload,Wanx+CogView pooled,D_OPT3,0.749,No,No,AI-optimized variant 3
+expD_opt,T10,high_complexity_standard,Wanx+CogView pooled,C,0.863,reference,,manual PPS
+expD_opt,T10,high_complexity_standard,Wanx+CogView pooled,D0_BASE,0.858,No,,AI-expanded baseline
+expD_opt,T10,high_complexity_standard,Wanx+CogView pooled,D_OPT1,0.851,No,No,AI-optimized variant 1
+expD_opt,T10,high_complexity_standard,Wanx+CogView pooled,D_OPT2,0.859,No,marginal,AI-optimized variant 2
+expD_opt,T10,high_complexity_standard,Wanx+CogView pooled,D_OPT3,0.847,No,No,AI-optimized variant 3
+expD_opt,T12,mid_complexity_bridge,Wanx+CogView pooled,C,0.957,reference,,manual PPS
+expD_opt,T12,mid_complexity_bridge,Wanx+CogView pooled,D0_BASE,0.952,No,,AI-expanded baseline
+expD_opt,T12,mid_complexity_bridge,Wanx+CogView pooled,D_OPT1,0.948,No,No,AI-optimized variant 1
+expD_opt,T12,mid_complexity_bridge,Wanx+CogView pooled,D_OPT2,0.953,No,No,AI-optimized variant 2
+expD_opt,T12,mid_complexity_bridge,Wanx+CogView pooled,D_OPT3,0.950,No,No,AI-optimized variant 3

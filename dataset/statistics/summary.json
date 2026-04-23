@@ -131,6 +131,54 @@
         "ds"
       ],
       "release_scope": "paper4_direct_only"
+    },
+    "paper_image": {
+      "title": "Structured Intent Encoding for AI Image Generation: Purpose Anchoring, Density Boundaries, and Cross-Modal Protocol Transfer",
+      "venue": "Neurocomputing",
+      "arxiv": "pending",
+      "status": "under_review",
+      "modality": "text-to-image",
+      "language": "zh",
+      "models": [
+        "wanx",
+        "cogview",
+        "doubaoimage"
+      ],
+      "stages": [
+        "pilot",
+        "expA_ablation",
+        "expC_why_decomposition",
+        "expD_density",
+        "expD_opt_surface"
+      ],
+      "conditions": {
+        "pilot": ["A", "C", "D"],
+        "expA": ["FULL", "ABL_WHY", "ABL_WHO", "ABL_HOWFEEL", "ABL_HOWMUCH"],
+        "expC": ["WHY_PURPOSE", "WHY_AUDIENCE", "WHY_BOTH", "WHY_ABSTRACT", "NO_WHY"],
+        "expD": ["ELASTIC_3", "ELASTIC_5", "FULL_8", "STRICT_PLUS"],
+        "expD_opt": ["C", "D0_BASE", "D_OPT1", "D_OPT2", "D_OPT3"]
+      },
+      "tasks": ["T04", "T05", "T08", "T10", "T11", "T12", "O1", "O2"],
+      "images_total": 1296,
+      "cells_total": 324,
+      "metrics": ["fICMw", "sICMw", "structural_gap"],
+      "freeze_manifests": [
+        "FREEZE_v1 (pilot, 2026-04-18)",
+        "FREEZE_exp_AB_v1 (Exp A, 2026-04-19)",
+        "FREEZE_exp_CD_v1 (Exp C+D, 2026-04-20)"
+      ],
+      "files": {
+        "pilot": "paper_image/pilot_scoring.csv",
+        "ablation": "paper_image/ablation_scoring.csv",
+        "why_decomposition": "paper_image/why_decomposition_scoring.csv",
+        "density": "paper_image/density_scoring.csv",
+        "optimization": "paper_image/optimization_scoring.csv",
+        "pairwise": "paper_image/pairwise_comparisons.csv",
+        "analysis_script": "paper_image/compute_stats.py"
+      },
+      "figures": "figures/paper_image/",
+      "note": "Image-modality paper; data format is CSV cell-level aggregates, not JSONL prompt records. Raw image-level scoring files available from corresponding author on request."
     }
-  }
+  },
+  "image_paper_note": "paper_image uses a different data schema than Papers 1-4 (CSV aggregates vs JSONL per-record). Image counts are not included in text-paper record totals."
 }

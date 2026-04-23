@@ -1,0 +1,37 @@
+stage,task_id,task_type,model,density_condition,active_dims,fICMw,optimal_for_task,notes
+expD,T05,high_ambiguity_standard,Wanx+CogView pooled,ELASTIC_3,3,0.856,,
+expD,T05,high_ambiguity_standard,Wanx+CogView pooled,ELASTIC_5,5,0.957,,
+expD,T05,high_ambiguity_standard,Wanx+CogView pooled,FULL_8,8,0.992,optimal,near-ceiling
+expD,T05,high_ambiguity_standard,Wanx+CogView pooled,STRICT_PLUS,8+,0.910,,mild decline
+expD,T08,specification_overload,Wanx+CogView pooled,ELASTIC_3,3,0.777,optimal,
+expD,T08,specification_overload,Wanx+CogView pooled,ELASTIC_5,5,0.762,,
+expD,T08,specification_overload,Wanx+CogView pooled,FULL_8,8,0.750,,
+expD,T08,specification_overload,Wanx+CogView pooled,STRICT_PLUS,8+,0.297,,catastrophic collapse d=-2.31
+expD,T10,high_complexity_standard,Wanx+CogView pooled,ELASTIC_3,3,0.766,,
+expD,T10,high_complexity_standard,Wanx+CogView pooled,ELASTIC_5,5,0.875,optimal,
+expD,T10,high_complexity_standard,Wanx+CogView pooled,FULL_8,8,0.867,,near-saturation
+expD,T10,high_complexity_standard,Wanx+CogView pooled,STRICT_PLUS,8+,0.668,,moderate decline
+expD,O1,task_level_overload,Wanx+CogView pooled,ELASTIC_3,3,0.231,,intrinsic conflict
+expD,O1,task_level_overload,Wanx+CogView pooled,ELASTIC_5,5,0.250,,intrinsic conflict
+expD,O1,task_level_overload,Wanx+CogView pooled,FULL_8,8,0.391,,intrinsic conflict
+expD,O1,task_level_overload,Wanx+CogView pooled,STRICT_PLUS,8+,0.375,,density-insensitive
+expD,O2,non_overload_tension,Wanx+CogView pooled,ELASTIC_3,3,0.813,,
+expD,O2,non_overload_tension,Wanx+CogView pooled,ELASTIC_5,5,0.809,,
+expD,O2,non_overload_tension,Wanx+CogView pooled,FULL_8,8,0.660,,lowest
+expD,O2,non_overload_tension,Wanx+CogView pooled,STRICT_PLUS,8+,0.852,optimal,more spec=better
+expD,T08,specification_overload,Wanx,ELASTIC_3,3,0.742,,,
+expD,T08,specification_overload,Wanx,ELASTIC_5,5,0.797,,,
+expD,T08,specification_overload,Wanx,FULL_8,8,0.781,,,
+expD,T08,specification_overload,Wanx,STRICT_PLUS,8+,0.094,,minimum fICMw all cells
+expD,T08,specification_overload,CogView,ELASTIC_3,3,0.813,,,
+expD,T08,specification_overload,CogView,ELASTIC_5,5,0.727,,,
+expD,T08,specification_overload,CogView,FULL_8,8,0.719,,,
+expD,T08,specification_overload,CogView,STRICT_PLUS,8+,0.500,,,
+expD,T05,high_ambiguity_standard,Wanx,ELASTIC_3,3,0.750,,,
+expD,T05,high_ambiguity_standard,Wanx,ELASTIC_5,5,0.922,,,
+expD,T05,high_ambiguity_standard,Wanx,FULL_8,8,1.000,,ceiling
+expD,T05,high_ambiguity_standard,Wanx,STRICT_PLUS,8+,1.000,,ceiling
+expD,T05,high_ambiguity_standard,CogView,ELASTIC_3,3,0.961,,,
+expD,T05,high_ambiguity_standard,CogView,ELASTIC_5,5,0.992,,,
+expD,T05,high_ambiguity_standard,CogView,FULL_8,8,0.985,,,
+expD,T05,high_ambiguity_standard,CogView,STRICT_PLUS,8+,0.820,,,
