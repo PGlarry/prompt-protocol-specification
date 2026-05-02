@@ -4,7 +4,7 @@ This directory contains all data and analysis scripts for the paper:
 
 > **Structural Recovery Without Intent Fidelity: A Blind Spot in Holistic
 > Evaluation of Large Language Models**
-> Gang Peng — submitted to *Nature Machine Intelligence* (2026)
+> Gang Peng — prepared for submission to *Nature Machine Intelligence*
 
 The study quantifies the **structural-fidelity split** — a systematic pattern
 in which LLM outputs achieve near-perfect holistic alignment scores (GA=5)
@@ -120,9 +120,12 @@ python analysis_scripts/pub_priv_analysis.py
 
 ## Relationship to Prior Work
 
-This dataset supersedes the separately released `paper4` dataset.
-Papers 1–3 data remains in `dataset/data/paper1/`, `paper2/`, `paper3/`
-respectively (corresponding to arXiv refs 2603.18976, 2603.25379, 2603.29953).
+This dataset accompanies the manuscript "Structural Recovery Without Intent Fidelity:
+A Blind Spot in Holistic Evaluation of Large Language Models." It builds on Papers 1–3,
+whose data remain available in `dataset/data/paper1/`, `paper2/`, and `paper3/`
+respectively (arXiv refs 2603.18976, 2603.25379, 2603.29953). The present dataset
+contains the integrated structural-fidelity split experiments, including dimensional
+ablation, human evaluation, proxy annotation, and weight-perturbation analyses.
 
 ---
 
