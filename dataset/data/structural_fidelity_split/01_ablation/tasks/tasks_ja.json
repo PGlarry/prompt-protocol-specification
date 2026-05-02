@@ -1,0 +1,251 @@
+{
+  "description": "IST Ablation Experiment 1 — JA tasks (from Paper 3 Condition C)",
+  "version": "1.0",
+  "lang": "ja",
+  "source": "paper3_condition_c",
+  "theory": "Task-Conditioned Dimensional Weighting Principle (IST Paper 4)",
+  "prior_weights": {
+    "travel": {
+      "what": 0.2,
+      "why": 0.1,
+      "who": 0.1,
+      "when": 0.1,
+      "where": 0.2,
+      "how_to_do": 0.15,
+      "how_much": 0.1,
+      "how_feel": 0.05
+    },
+    "business": {
+      "what": 0.15,
+      "why": 0.25,
+      "who": 0.15,
+      "when": 0.05,
+      "where": 0.05,
+      "how_to_do": 0.2,
+      "how_much": 0.1,
+      "how_feel": 0.05
+    },
+    "technical": {
+      "what": 0.2,
+      "why": 0.1,
+      "who": 0.1,
+      "when": 0.05,
+      "where": 0.05,
+      "how_to_do": 0.25,
+      "how_much": 0.2,
+      "how_feel": 0.05
+    }
+  },
+  "tasks": [
+    {
+      "id": "T01",
+      "domain": "travel",
+      "lang": "ja",
+      "topic": "東京",
+      "simple_prompt": "タスク目標 (What): 東京の5日間の個人旅行ガイドを作成してください；KPI：主要観光スポットを5か所以上カバー、予算の参考情報を含む、交通アドバイスを含む"
+    },
+    {
+      "id": "T02",
+      "domain": "travel",
+      "lang": "ja",
+      "topic": "京都",
+      "simple_prompt": "タスク目標 (What): 京都の4日間の歴史・文化旅行ガイドを作成してください；KPI：主要な寺社仏閣を5か所以上紹介、伝統体験を含む、季節のおすすめを含む"
+    },
+    {
+      "id": "T03",
+      "domain": "travel",
+      "lang": "ja",
+      "topic": "大阪",
+      "simple_prompt": "タスク目標 (What): 大阪の3日間のグルメ・観光旅行ガイドを作成してください；KPI：道頓堀などの名所を含む観光スポット紹介、ローカルグルメを5種類以上紹介、食べ歩きルートを含む"
+    },
+    {
+      "id": "T04",
+      "domain": "travel",
+      "lang": "ja",
+      "topic": "北海道",
+      "simple_prompt": "タスク目標 (What): 北海道の5日間の自然・グルメ旅行ガイドを作成してください；KPI：札幌・函館・富良野などの主要エリアをカバー、季節のアクティビティを含む、名物グルメを含む"
+    },
+    {
+      "id": "T05",
+      "domain": "travel",
+      "lang": "ja",
+      "topic": "沖縄",
+      "simple_prompt": "タスク目標 (What): 沖縄の4日間のリゾート旅行ガイドを作成してください；KPI：美しいビーチスポットを3か所以上紹介、マリンアクティビティを含む、琉球文化体験を含む"
+    },
+    {
+      "id": "T06",
+      "domain": "travel",
+      "lang": "ja",
+      "topic": "成都（中国）",
+      "simple_prompt": "タスク目標 (What): 中国・成都の4日間の旅行ガイドを作成してください；KPI：パンダ基地観光を含む、四川料理体験を含む、主要観光地を5か所以上紹介"
+    },
+    {
+      "id": "T07",
+      "domain": "travel",
+      "lang": "ja",
+      "topic": "西安（中国）",
+      "simple_prompt": "タスク目標 (What): 中国・西安の3日間の歴史旅行ガイドを作成してください；KPI：兵馬俑・城壁・回民街など主要観光スポットを含む、古代シルクロードの歴史的背景を紹介、実用的な旅行情報を含む"
+    },
+    {
+      "id": "T08",
+      "domain": "travel",
+      "lang": "ja",
+      "topic": "雲南大理（中国）",
+      "simple_prompt": "タスク目標 (What): 中国・雲南省大理の3日間のスローライフ旅行ガイドを作成してください；KPI：蒼山洱海の自然景観を紹介、大理古城の魅力を含む、少数民族文化体験を含む"
+    },
+    {
+      "id": "T09",
+      "domain": "travel",
+      "lang": "ja",
+      "topic": "バリ島",
+      "simple_prompt": "タスク目標 (What): インドネシア・バリ島の5日間のリゾート旅行ガイドを作成してください；KPI：ウブド・クタ・スミニャックなどのエリア別魅力を紹介、寺院観光を含む、ヨガ・スパ体験を含む"
+    },
+    {
+      "id": "T10",
+      "domain": "travel",
+      "lang": "ja",
+      "topic": "チェンマイ",
+      "simple_prompt": "タスク目標 (What): タイ・チェンマイの4日間の旅行ガイドを作成してください；KPI：主要アクティビティを5つ以上紹介、象との触れ合い体験を含む、コスパ良く楽しむためのヒントを含む"
+    },
+    {
+      "id": "B01",
+      "domain": "business",
+      "lang": "ja",
+      "topic": "新エネルギー自動車市場",
+      "simple_prompt": "タスク目標 (What): 新エネルギー自動車市場の分析レポートを作成してください；KPI：市場規模を含む、主要プレーヤーを含む、成長トレンドを含む"
+    },
+    {
+      "id": "B02",
+      "domain": "business",
+      "lang": "ja",
+      "topic": "短編動画プラットフォーム",
+      "simple_prompt": "タスク目標 (What): 短編動画プラットフォーム市場の競合分析レポートを作成してください；KPI：主要プラットフォームを比較する、収益モデルを含む、ユーザー行動トレンドを含む"
+    },
+    {
+      "id": "B03",
+      "domain": "business",
+      "lang": "ja",
+      "topic": "オンライン教育",
+      "simple_prompt": "タスク目標 (What): オンライン教育市場の動向分析レポートを作成してください；KPI：コロナ後の市場変化を含む、主要EdTechプレーヤーを含む、AI活用による学習革新を含む"
+    },
+    {
+      "id": "B04",
+      "domain": "business",
+      "lang": "ja",
+      "topic": "AI大規模言語モデル",
+      "simple_prompt": "タスク目標 (What): AIの大規模言語モデルについての解説記事を書いてください；KPI：技術的な仕組みを含む、主要モデルを含む、ビジネス応用を含む"
+    },
+    {
+      "id": "B05",
+      "domain": "business",
+      "lang": "ja",
+      "topic": "ローカルライフサービス",
+      "simple_prompt": "タスク目標 (What): ローカルライフサービス市場（フードデリバリー・家事代行・地域密着型O2Oサービス）の市場分析レポートを作成してください；KPI：市場規模を含む、競合状況を含む、ユーザーニーズの変化を含む"
+    },
+    {
+      "id": "B06",
+      "domain": "business",
+      "lang": "ja",
+      "topic": "コーヒーチェーン",
+      "simple_prompt": "タスク目標 (What): コーヒーチェーン市場の競合分析レポートを作成してください；KPI：主要チェーンを比較する、価格戦略を含む、ブランド差別化を含む"
+    },
+    {
+      "id": "B07",
+      "domain": "business",
+      "lang": "ja",
+      "topic": "クロスボーダーEC",
+      "simple_prompt": "タスク目標 (What): クロスボーダーEC（越境電子商取引）市場の分析レポートを作成してください；KPI：市場規模を含む、主要プラットフォームを含む、日本企業の参入機会を含む"
+    },
+    {
+      "id": "B08",
+      "domain": "business",
+      "lang": "ja",
+      "topic": "スマートホーム",
+      "simple_prompt": "タスク目標 (What): スマートホーム市場の動向分析レポートを作成してください；KPI：市場規模を含む、主要エコシステムを比較する、日本市場の特性を含む"
+    },
+    {
+      "id": "B09",
+      "domain": "business",
+      "lang": "ja",
+      "topic": "ペット経済",
+      "simple_prompt": "タスク目標 (What): ペット経済市場の成長分析レポートを作成してください；KPI：市場規模を含む、セグメント別分析を含む、少子化との相関関係を含む"
+    },
+    {
+      "id": "B10",
+      "domain": "business",
+      "lang": "ja",
+      "topic": "調理済み食品",
+      "simple_prompt": "タスク目標 (What): 調理済み食品（ミールキット・冷凍食品・惣菜デリバリー）市場の分析レポートを作成してください；KPI：コロナ後の市場変化を含む、主要プレーヤーを含む、消費者ニーズの変化を含む"
+    },
+    {
+      "id": "tech_01",
+      "domain": "technical",
+      "lang": "ja",
+      "topic": "大規模言語モデル（LLM）",
+      "simple_prompt": "タスク目標 (What): 大規模言語モデル（LLM）について、技術者向けの解説記事を書いてください；KPI：アーキテクチャを含む、トレーニング手法を含む、主な応用例を含む"
+    },
+    {
+      "id": "tech_02",
+      "domain": "technical",
+      "lang": "ja",
+      "topic": "ブロックチェーン技術",
+      "simple_prompt": "タスク目標 (What): ブロックチェーン技術について技術者向けの解説記事を書いてください；KPI：分散台帳の仕組みを含む、コンセンサスアルゴリズムを含む、スマートコントラクトの実装を含む"
+    },
+    {
+      "id": "tech_03",
+      "domain": "technical",
+      "lang": "ja",
+      "topic": "量子コンピューティング",
+      "simple_prompt": "タスク目標 (What): 量子コンピューティングについて技術者向けの解説記事を書いてください；KPI：量子ビット・重ね合わせ・量子もつれの原理を含む、量子アルゴリズムを含む、現在の実装技術を含む"
+    },
+    {
+      "id": "tech_04",
+      "domain": "technical",
+      "lang": "ja",
+      "topic": "ニューラルネットワークと深層学習",
+      "simple_prompt": "タスク目標 (What): ニューラルネットワークと深層学習について技術者向けの解説記事を書いてください；KPI：バックプロパゲーションの説明を含む、主要アーキテクチャを含む、PyTorchによる実装例を含む"
+    },
+    {
+      "id": "tech_05",
+      "domain": "technical",
+      "lang": "ja",
+      "topic": "クラウドコンピューティング",
+      "simple_prompt": "タスク目標 (What): クラウドコンピューティングについて技術者向けの解説記事を書いてください；KPI：IaaS・PaaS・SaaSの違いを説明、主要クラウドプロバイダーを比較する、コスト最適化戦略を含む"
+    },
+    {
+      "id": "tech_06",
+      "domain": "technical",
+      "lang": "ja",
+      "topic": "IoT（モノのインターネット）",
+      "simple_prompt": "タスク目標 (What): IoT（モノのインターネット）について技術者向けの解説記事を書いてください；KPI：IoTアーキテクチャを含む、通信プロトコルを含む、セキュリティ設計を含む"
+    },
+    {
+      "id": "tech_07",
+      "domain": "technical",
+      "lang": "ja",
+      "topic": "5G技術",
+      "simple_prompt": "タスク目標 (What): 5G技術について技術者向けの解説記事を書いてください；KPI：4Gとの技術的違いを含む、主要ユースケースを含む、日本での展開状況を含む"
+    },
+    {
+      "id": "tech_08",
+      "domain": "technical",
+      "lang": "ja",
+      "topic": "サイバーセキュリティと暗号化",
+      "simple_prompt": "タスク目標 (What): サイバーセキュリティと暗号化について技術者向けの解説記事を書いてください；KPI：暗号化の種類と仕組みを含む、ゼロトラストアーキテクチャを含む、主要な脅威と対策を含む"
+    },
+    {
+      "id": "tech_09",
+      "domain": "technical",
+      "lang": "ja",
+      "topic": "APIインターフェース",
+      "simple_prompt": "タスク目標 (What): APIインターフェース設計について技術者向けの解説記事を書いてください；KPI：REST・GraphQL・gRPCを比較する、認証・認可の実装を含む、APIバージョニング戦略を含む"
+    },
+    {
+      "id": "tech_10",
+      "domain": "technical",
+      "lang": "ja",
+      "topic": "機械学習vs人工知能vsデータサイエンス",
+      "simple_prompt": "タスク目標 (What): 機械学習・人工知能・データサイエンスの違いについて技術者向けの解説記事を書いてください；KPI：各分野の定義と範囲を含む、必要なスキルセットを含む、キャリアパスの違いを含む"
+    }
+  ]
+}

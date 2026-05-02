@@ -1,0 +1,251 @@
+{
+  "description": "IST Ablation Experiment 1 — EN tasks (from Paper 3 Condition C)",
+  "version": "1.0",
+  "lang": "en",
+  "source": "paper3_condition_c",
+  "theory": "Task-Conditioned Dimensional Weighting Principle (IST Paper 4)",
+  "prior_weights": {
+    "travel": {
+      "what": 0.2,
+      "why": 0.1,
+      "who": 0.1,
+      "when": 0.1,
+      "where": 0.2,
+      "how_to_do": 0.15,
+      "how_much": 0.1,
+      "how_feel": 0.05
+    },
+    "business": {
+      "what": 0.15,
+      "why": 0.25,
+      "who": 0.15,
+      "when": 0.05,
+      "where": 0.05,
+      "how_to_do": 0.2,
+      "how_much": 0.1,
+      "how_feel": 0.05
+    },
+    "technical": {
+      "what": 0.2,
+      "why": 0.1,
+      "who": 0.1,
+      "when": 0.05,
+      "where": 0.05,
+      "how_to_do": 0.25,
+      "how_much": 0.2,
+      "how_feel": 0.05
+    }
+  },
+  "tasks": [
+    {
+      "id": "T01",
+      "domain": "travel",
+      "lang": "en",
+      "topic": "Tokyo",
+      "simple_prompt": "Task Goal (What): Write a 5-day self-guided Tokyo travel itinerary; KPIs: Cover at least 5 must-see attractions, Include"
+    },
+    {
+      "id": "T02",
+      "domain": "travel",
+      "lang": "en",
+      "topic": "Kyoto",
+      "simple_prompt": "Task Goal (What): Write a 3-day cultural deep-dive guide to Kyoto; KPIs: Cover at least 4 shrines and temples, Include c"
+    },
+    {
+      "id": "T03",
+      "domain": "travel",
+      "lang": "en",
+      "topic": "Osaka",
+      "simple_prompt": "Task Goal (What): Write a 2-day Osaka food and shopping guide; KPIs: Recommend at least 8 signature dishes, Include desc"
+    },
+    {
+      "id": "T04",
+      "domain": "travel",
+      "lang": "en",
+      "topic": "Hokkaido",
+      "simple_prompt": "Task Goal (What): Write a 5-day Hokkaido winter ski and onsen guide; KPIs: Cover at least 2 ski resorts, Include onsen r"
+    },
+    {
+      "id": "T05",
+      "domain": "travel",
+      "lang": "en",
+      "topic": "Okinawa",
+      "simple_prompt": "Task Goal (What): Write a 4-day Okinawa family beach island guide; KPIs: Include at least 4 family-friendly attractions,"
+    },
+    {
+      "id": "T06",
+      "domain": "travel",
+      "lang": "en",
+      "topic": "Chengdu",
+      "simple_prompt": "Task Goal (What): Write a 3-day Chengdu food and culture guide; KPIs: Recommend at least 5 Sichuan restaurants, Include "
+    },
+    {
+      "id": "T07",
+      "domain": "travel",
+      "lang": "en",
+      "topic": "Xi'an",
+      "simple_prompt": "Task Goal (What): Write a 3-day Xi'an historical culture deep-dive guide; KPIs: Cover at least 2 UNESCO heritage sites, "
+    },
+    {
+      "id": "T08",
+      "domain": "travel",
+      "lang": "en",
+      "topic": "Dali, Yunnan",
+      "simple_prompt": "Task Goal (What): Write a 4-day slow-travel guide to cycling around Erhai Lake and exploring Dali Old Town"
+    },
+    {
+      "id": "T09",
+      "domain": "travel",
+      "lang": "en",
+      "topic": "Bali",
+      "simple_prompt": "Task Goal (What): Write a 5-day luxury honeymoon guide to Bali"
+    },
+    {
+      "id": "T10",
+      "domain": "travel",
+      "lang": "en",
+      "topic": "Chiang Mai",
+      "simple_prompt": "Task Goal (What): Write a digital nomad long-stay guide for Chiang Mai"
+    },
+    {
+      "id": "B01",
+      "domain": "business",
+      "lang": "en",
+      "topic": "EV market (China)",
+      "simple_prompt": "Task Goal (What): Analyze the competitive landscape of China's electric vehicle market in 2024; KPIs: Cover top 5 brands"
+    },
+    {
+      "id": "B02",
+      "domain": "business",
+      "lang": "en",
+      "topic": "Short-form video platforms (TikTok/Douyin)",
+      "simple_prompt": "Task Goal (What): Comparative analysis of the commercialization competition among TikTok/Douyin, Kuaishou, and WeChat Vi"
+    },
+    {
+      "id": "B03",
+      "domain": "business",
+      "lang": "en",
+      "topic": "Online education (China)",
+      "simple_prompt": "Task Goal (What): Analyze the restructuring of China's online education industry and new opportunities after the Double "
+    },
+    {
+      "id": "B04",
+      "domain": "business",
+      "lang": "en",
+      "topic": "AI large language model market",
+      "simple_prompt": "Task Goal (What): Analyze the global AI LLM competitive landscape in 2024: OpenAI vs Anthropic vs Google vs Chinese play"
+    },
+    {
+      "id": "B05",
+      "domain": "business",
+      "lang": "en",
+      "topic": "Local O2O services (Meituan vs TikTok/Douyin)",
+      "simple_prompt": "Task Goal (What): In-depth comparison of Meituan and TikTok/Douyin local services business competitive strategies"
+    },
+    {
+      "id": "B06",
+      "domain": "business",
+      "lang": "en",
+      "topic": "Coffee chain market (China)",
+      "simple_prompt": "Task Goal (What): Analyze the three-way battle among Starbucks, Luckin Coffee, and Cotti Coffee in China's coffee market"
+    },
+    {
+      "id": "B07",
+      "domain": "business",
+      "lang": "en",
+      "topic": "Cross-border e-commerce",
+      "simple_prompt": "Task Goal (What): Analyze the competitive landscape of Temu/SHEIN/TikTok Shop/AliExpress in global markets"
+    },
+    {
+      "id": "B08",
+      "domain": "business",
+      "lang": "en",
+      "topic": "Smart home market (China)",
+      "simple_prompt": "Task Goal (What): Analyze the smart home ecosystem competition among Xiaomi, Huawei, Haier, and Tuya"
+    },
+    {
+      "id": "B09",
+      "domain": "business",
+      "lang": "en",
+      "topic": "Pet economy (China)",
+      "simple_prompt": "Task Goal (What): Analyze competitive dynamics in China's three pet industry verticals: pet food, veterinary care, and p"
+    },
+    {
+      "id": "B10",
+      "domain": "business",
+      "lang": "en",
+      "topic": "Ready-to-eat meals market (China)",
+      "simple_prompt": "Task Goal (What): Analyze the B2B and B2C dual-channel competitive landscape in the ready-to-eat meal market"
+    },
+    {
+      "id": "tech_01",
+      "domain": "technical",
+      "lang": "en",
+      "topic": "Large Language Models (LLMs)",
+      "simple_prompt": "Task Goal (What): Explain how large language models (LLMs) work and their core concepts in an accessible, easy-to-unders"
+    },
+    {
+      "id": "tech_02",
+      "domain": "technical",
+      "lang": "en",
+      "topic": "Blockchain technology",
+      "simple_prompt": "Task Goal (What): Explain blockchain technology's core principles, characteristics, and real-world application value to "
+    },
+    {
+      "id": "tech_03",
+      "domain": "technical",
+      "lang": "en",
+      "topic": "Quantum computing",
+      "simple_prompt": "Task Goal (What): Use everyday analogies to explain the principles of quantum computing and objectively evaluate its rea"
+    },
+    {
+      "id": "tech_04",
+      "domain": "technical",
+      "lang": "en",
+      "topic": "Neural networks and deep learning",
+      "simple_prompt": "Task Goal (What): Use intuitive analogies to explain how artificial neural networks and deep learning work, and explain "
+    },
+    {
+      "id": "tech_05",
+      "domain": "technical",
+      "lang": "en",
+      "topic": "Cloud computing",
+      "simple_prompt": "Task Goal (What): Explain the essence of cloud computing, its service models, and the state of data security to help ord"
+    },
+    {
+      "id": "tech_06",
+      "domain": "technical",
+      "lang": "en",
+      "topic": "Internet of Things (IoT)",
+      "simple_prompt": "Task Goal (What): Explain the concept and architecture of IoT, its practical applications in smart homes, and analyze pr"
+    },
+    {
+      "id": "tech_07",
+      "domain": "technical",
+      "lang": "en",
+      "topic": "5G technology",
+      "simple_prompt": "Task Goal (What): Objectively evaluate 5G technology's real capabilities, limitations, and actual impact on ordinary use"
+    },
+    {
+      "id": "tech_08",
+      "domain": "technical",
+      "lang": "en",
+      "topic": "Cybersecurity and passwords",
+      "simple_prompt": "Task Goal (What): Provide a practical password security guide, explain password cracking principles, and give immediatel"
+    },
+    {
+      "id": "tech_09",
+      "domain": "technical",
+      "lang": "en",
+      "topic": "APIs",
+      "simple_prompt": "Task Goal (What): Use everyday analogies to explain API concepts, how they work, and their business value to non-program"
+    },
+    {
+      "id": "tech_10",
+      "domain": "technical",
+      "lang": "en",
+      "topic": "AI vs Machine Learning vs Data Science",
+      "simple_prompt": "Task Goal (What): Use a clear hierarchical diagram (in text description) to explain the containment relationships and co"
+    }
+  ]
+}

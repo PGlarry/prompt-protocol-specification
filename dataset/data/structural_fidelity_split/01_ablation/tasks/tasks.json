@@ -1,0 +1,71 @@
+{
+  "description": "IST Validation Experiment 1: Single-Dimension Ablation",
+  "version": "1.0",
+  "theory": "Task-Conditioned Dimensional Weighting Principle (IST Paper 4)",
+  "prior_weights": {
+    "travel": {
+      "what": 0.20,
+      "why": 0.10,
+      "who": 0.10,
+      "when": 0.10,
+      "where": 0.20,
+      "how_to_do": 0.15,
+      "how_much": 0.10,
+      "how_feel": 0.05
+    },
+    "business": {
+      "what": 0.15,
+      "why": 0.25,
+      "who": 0.15,
+      "when": 0.05,
+      "where": 0.05,
+      "how_to_do": 0.20,
+      "how_much": 0.10,
+      "how_feel": 0.05
+    },
+    "technical": {
+      "what": 0.20,
+      "why": 0.10,
+      "who": 0.10,
+      "when": 0.05,
+      "where": 0.05,
+      "how_to_do": 0.25,
+      "how_much": 0.20,
+      "how_feel": 0.05
+    }
+  },
+  "tasks": [
+    {"id": "TR01", "domain": "travel", "lang": "zh", "simple_prompt": "写一篇惠州两日游攻略。"},
+    {"id": "TR02", "domain": "travel", "lang": "zh", "simple_prompt": "为一家三口规划一次成都五日游方案。"},
+    {"id": "TR03", "domain": "travel", "lang": "zh", "simple_prompt": "设计一条云南大理洱海环湖骑行路线。"},
+    {"id": "TR04", "domain": "travel", "lang": "zh", "simple_prompt": "写一篇适合年轻人的西藏自驾游攻略。"},
+    {"id": "TR05", "domain": "travel", "lang": "zh", "simple_prompt": "为退休老人推荐一条张家界三日游行程。"},
+    {"id": "TR06", "domain": "travel", "lang": "zh", "simple_prompt": "规划一次厦门鼓浪屿两日深度游。"},
+    {"id": "TR07", "domain": "travel", "lang": "zh", "simple_prompt": "写一篇黄山登山游玩攻略。"},
+    {"id": "TR08", "domain": "travel", "lang": "zh", "simple_prompt": "为蜜月旅行推荐三亚海岛游方案。"},
+    {"id": "TR09", "domain": "travel", "lang": "zh", "simple_prompt": "设计一条适合摄影爱好者的新疆北疆路线。"},
+    {"id": "TR10", "domain": "travel", "lang": "zh", "simple_prompt": "写一篇国庆节期间避开人潮的周边短途游推荐。"},
+
+    {"id": "BZ01", "domain": "business", "lang": "zh", "simple_prompt": "分析国内新能源汽车行业的竞争格局。"},
+    {"id": "BZ02", "domain": "business", "lang": "zh", "simple_prompt": "为一家中型制造企业制定AI应用落地规划。"},
+    {"id": "BZ03", "domain": "business", "lang": "zh", "simple_prompt": "写一份咖啡品牌进入下沉市场的营销策略。"},
+    {"id": "BZ04", "domain": "business", "lang": "zh", "simple_prompt": "分析跨境电商平台Temu的商业模式与增长逻辑。"},
+    {"id": "BZ05", "domain": "business", "lang": "zh", "simple_prompt": "为初创SaaS公司设计一套客户成功体系。"},
+    {"id": "BZ06", "domain": "business", "lang": "zh", "simple_prompt": "写一份餐饮连锁品牌的加盟商招募方案。"},
+    {"id": "BZ07", "domain": "business", "lang": "zh", "simple_prompt": "分析短视频平台广告业务的盈利模式。"},
+    {"id": "BZ08", "domain": "business", "lang": "zh", "simple_prompt": "为一家传统零售企业设计数字化转型路线图。"},
+    {"id": "BZ09", "domain": "business", "lang": "zh", "simple_prompt": "写一份面向投资人的医疗AI项目商业计划书摘要。"},
+    {"id": "BZ10", "domain": "business", "lang": "zh", "simple_prompt": "分析私域流量运营对电商品牌的战略价值。"},
+
+    {"id": "TC01", "domain": "technical", "lang": "zh", "simple_prompt": "写一份Python后端服务部署到Kubernetes的操作手册。"},
+    {"id": "TC02", "domain": "technical", "lang": "zh", "simple_prompt": "解释RAG（检索增强生成）系统的架构设计与实现步骤。"},
+    {"id": "TC03", "domain": "technical", "lang": "zh", "simple_prompt": "写一篇MySQL数据库性能优化的技术指南。"},
+    {"id": "TC04", "domain": "technical", "lang": "zh", "simple_prompt": "介绍微服务架构下API网关的选型与配置方案。"},
+    {"id": "TC05", "domain": "technical", "lang": "zh", "simple_prompt": "写一份大语言模型fine-tuning的实施流程文档。"},
+    {"id": "TC06", "domain": "technical", "lang": "zh", "simple_prompt": "解释向量数据库的工作原理及主流产品对比。"},
+    {"id": "TC07", "domain": "technical", "lang": "zh", "simple_prompt": "写一份前端React项目代码规范与工程化配置指南。"},
+    {"id": "TC08", "domain": "technical", "lang": "zh", "simple_prompt": "介绍CI/CD流水线的设计与GitHub Actions实现方法。"},
+    {"id": "TC09", "domain": "technical", "lang": "zh", "simple_prompt": "写一份分布式系统中消息队列选型（Kafka vs RabbitMQ）的分析报告。"},
+    {"id": "TC10", "domain": "technical", "lang": "zh", "simple_prompt": "解释Transformer模型的注意力机制及其在NLP中的应用。"}
+  ]
+}

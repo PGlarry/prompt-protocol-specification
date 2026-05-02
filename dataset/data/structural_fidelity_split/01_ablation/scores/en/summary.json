@@ -1,0 +1,221 @@
+{
+  "generated": "2026-04-03T00:52:30.255500",
+  "rows": [
+    {
+      "domain": "business",
+      "removed_dim": "FULL",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.1575,
+      "mean_ds": null
+    },
+    {
+      "domain": "business",
+      "removed_dim": "how_feel",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.16,
+      "mean_ds": 1
+    },
+    {
+      "domain": "business",
+      "removed_dim": "how_much",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.0475,
+      "mean_ds": 0.9
+    },
+    {
+      "domain": "business",
+      "removed_dim": "how_to_do",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.3175,
+      "mean_ds": 0.8
+    },
+    {
+      "domain": "business",
+      "removed_dim": "when",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.0925,
+      "mean_ds": 0.9
+    },
+    {
+      "domain": "business",
+      "removed_dim": "where",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.125,
+      "mean_ds": 0.5
+    },
+    {
+      "domain": "business",
+      "removed_dim": "who",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.085,
+      "mean_ds": 0.9
+    },
+    {
+      "domain": "business",
+      "removed_dim": "why",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.0,
+      "mean_ds": 0
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "FULL",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.1675,
+      "mean_ds": null
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "how_feel",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.0375,
+      "mean_ds": 0.7
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "how_much",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.195,
+      "mean_ds": 1
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "how_to_do",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.1275,
+      "mean_ds": 0.8
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "when",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.1725,
+      "mean_ds": 0.5
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "where",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.225,
+      "mean_ds": 1
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "who",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.16,
+      "mean_ds": 0.6
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "why",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.135,
+      "mean_ds": 0.9
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "FULL",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.665,
+      "mean_ds": null
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "how_feel",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.8,
+      "mean_ds": 0.1
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "how_much",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.81,
+      "mean_ds": 0.4
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "how_to_do",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 4.9,
+      "mean_icmw": 0.765,
+      "mean_ds": 0.1
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "when",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.69,
+      "mean_ds": 0.7
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "where",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.78,
+      "mean_ds": 0
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "who",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.7575,
+      "mean_ds": 0.8
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "why",
+      "model": "gpt4o",
+      "n": 10,
+      "mean_ga": 5,
+      "mean_icmw": 0.7875,
+      "mean_ds": 0.4
+    }
+  ]
+}

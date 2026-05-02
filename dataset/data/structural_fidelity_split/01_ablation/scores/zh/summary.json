@@ -1,0 +1,221 @@
+{
+  "generated": "2026-04-02T07:51:39.188389",
+  "rows": [
+    {
+      "domain": "business",
+      "removed_dim": "FULL",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.5,
+      "mean_icmw": 0.8825,
+      "mean_ds": null
+    },
+    {
+      "domain": "business",
+      "removed_dim": "how_feel",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.6,
+      "mean_icmw": 0.86,
+      "mean_ds": 1
+    },
+    {
+      "domain": "business",
+      "removed_dim": "how_much",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.8,
+      "mean_icmw": 0.765,
+      "mean_ds": 1
+    },
+    {
+      "domain": "business",
+      "removed_dim": "how_to_do",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.4,
+      "mean_icmw": 0.7875,
+      "mean_ds": 0.6
+    },
+    {
+      "domain": "business",
+      "removed_dim": "when",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.3,
+      "mean_icmw": 0.8125,
+      "mean_ds": 0.5
+    },
+    {
+      "domain": "business",
+      "removed_dim": "where",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.4,
+      "mean_icmw": 0.825,
+      "mean_ds": 1
+    },
+    {
+      "domain": "business",
+      "removed_dim": "who",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.4,
+      "mean_icmw": 0.7175,
+      "mean_ds": 1
+    },
+    {
+      "domain": "business",
+      "removed_dim": "why",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.3,
+      "mean_icmw": 0.7975,
+      "mean_ds": 0.6
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "FULL",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.4,
+      "mean_icmw": 0.8525,
+      "mean_ds": null
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "how_feel",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.4,
+      "mean_icmw": 0.7325,
+      "mean_ds": 1
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "how_much",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.9,
+      "mean_icmw": 0.725,
+      "mean_ds": 1
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "how_to_do",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.7,
+      "mean_icmw": 0.8175,
+      "mean_ds": 0.6
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "when",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.4,
+      "mean_icmw": 0.81,
+      "mean_ds": 0.8
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "where",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.4,
+      "mean_icmw": 0.79,
+      "mean_ds": 1
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "who",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.2,
+      "mean_icmw": 0.7725,
+      "mean_ds": 0.7
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "why",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.4,
+      "mean_icmw": 0.8325,
+      "mean_ds": 1
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "FULL",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.7,
+      "mean_icmw": 0.855,
+      "mean_ds": null
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "how_feel",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.8,
+      "mean_icmw": 0.8175,
+      "mean_ds": 1
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "how_much",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.9,
+      "mean_icmw": 0.785,
+      "mean_ds": 1
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "how_to_do",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.7,
+      "mean_icmw": 0.825,
+      "mean_ds": 0.1
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "when",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.7,
+      "mean_icmw": 0.87,
+      "mean_ds": 0.9
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "where",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.5,
+      "mean_icmw": 0.8025,
+      "mean_ds": 0.2
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "who",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.8,
+      "mean_icmw": 0.855,
+      "mean_ds": 1
+    },
+    {
+      "domain": "travel",
+      "removed_dim": "why",
+      "model": "kimi",
+      "n": 10,
+      "mean_ga": 4.8,
+      "mean_icmw": 0.885,
+      "mean_ds": 0.9
+    }
+  ]
+}

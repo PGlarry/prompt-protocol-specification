@@ -1,0 +1,51 @@
+{
+  "description": "Paper B Experiment 1: Clean-split weighting pilot after leakage audit",
+  "version": "3.0",
+  "round": "pilot_round_clean_v3",
+  "theory": "Intent Signal Theory (IST) - Experiment 1 clean retest",
+  "notes": [
+    "This directory is independent from experiments/data/ist_weighting/ and experiments/data/ist_weighting_v2/.",
+    "Clean v3 retest uses leakage-cleaned full prompts only.",
+    "No outputs or scores should be written into earlier experiment trees."
+  ],
+  "conditions": [
+    "matched_v2",
+    "uniform_v2",
+    "mismatched_v2",
+    "perturbed_v2"
+  ],
+  "prior_weights": {
+    "business": {
+      "what": 0.15,
+      "why": 0.25,
+      "who": 0.15,
+      "when": 0.05,
+      "where": 0.05,
+      "how_to_do": 0.20,
+      "how_much": 0.10,
+      "how_feel": 0.05
+    },
+    "technical": {
+      "what": 0.20,
+      "why": 0.10,
+      "who": 0.10,
+      "when": 0.05,
+      "where": 0.05,
+      "how_to_do": 0.25,
+      "how_much": 0.20,
+      "how_feel": 0.05
+    }
+  },
+  "tasks": [
+    {"id": "BZ01", "domain": "business", "lang": "zh", "simple_prompt": "分析新能源汽车行业的竞争格局。"},
+    {"id": "BZ02", "domain": "business", "lang": "zh", "simple_prompt": "制定AI应用落地规划。"},
+    {"id": "BZ03", "domain": "business", "lang": "zh", "simple_prompt": "写一份咖啡品牌营销策略。"},
+    {"id": "BZ05", "domain": "business", "lang": "zh", "simple_prompt": "设计一套客户成功体系。"},
+    {"id": "BZ08", "domain": "business", "lang": "zh", "simple_prompt": "设计数字化转型路线图。"},
+    {"id": "BZ09", "domain": "business", "lang": "zh", "simple_prompt": "写一份医疗AI项目商业计划书摘要。"},
+    {"id": "TC01", "domain": "technical", "lang": "zh", "simple_prompt": "写一份Python后端服务部署操作手册。"},
+    {"id": "TC02", "domain": "technical", "lang": "zh", "simple_prompt": "解释RAG（检索增强生成）系统。"},
+    {"id": "TC08", "domain": "technical", "lang": "zh", "simple_prompt": "介绍CI/CD流水线。"},
+    {"id": "TC10", "domain": "technical", "lang": "zh", "simple_prompt": "解释Transformer模型的注意力机制。"}
+  ]
+}
