@@ -1,3 +1,4 @@
+from pathlib import Path
 """
 pub_priv_analysis.py
 ====================
@@ -24,7 +25,7 @@ from collections import defaultdict
 
 # ── Config ─────────────────────────────────────────────────────────────────
 THRESHOLD    = 0.7      # f-ICMw >= this → public; < this → private
-DATA_ROOT    = r"d:/pps/experiments/data/ist_ablation"
+DATA_ROOT    = str(Path(__file__).parent.parent / "01_ablation")
 DIMS         = ["why", "who", "when", "where", "how_to_do", "how_much", "how_feel"]
 DOMAINS      = ["business", "technical", "travel"]
 
@@ -40,9 +41,9 @@ MODEL_CAPACITY = {
 
 # Score directories: (lang, v2_dir)
 SCORE_DIRS = [
-    ("zh", os.path.join(DATA_ROOT, "scores_v2")),
-    ("en", os.path.join(DATA_ROOT, "scores_en")),
-    ("ja", os.path.join(DATA_ROOT, "scores_ja")),
+    ("zh", os.path.join(DATA_ROOT, "scores/zh")),
+    ("en", os.path.join(DATA_ROOT, "scores/en")),
+    ("ja", os.path.join(DATA_ROOT, "scores/ja")),
 ]
 
 # ── Load all v2 score records ───────────────────────────────────────────────

@@ -29,7 +29,7 @@ logging.basicConfig(level=logging.INFO,
 log = logging.getLogger(__name__)
 
 BASE_DIR   = Path(__file__).parent.parent
-IST_DIR    = BASE_DIR / "data" / "ist_ablation"
+IST_DIR    = BASE_DIR / "01_ablation"
 
 def get_task_file(lang: str) -> Path:
     if lang == "zh":
@@ -43,10 +43,10 @@ def get_dirs(version: str, lang: str = "zh"):
         score_dir  = IST_DIR / f"scores_v1{lang_suffix}"
         report_dir = IST_DIR / f"reports_v1{lang_suffix}"
     elif version == "v2":
-        score_dir  = IST_DIR / f"scores_v2{lang_suffix}"
+        score_dir  = IST_DIR / "scores" / ("zh" if lang == "zh" else lang)
         report_dir = IST_DIR / f"reports_v2{lang_suffix}"
     else:
-        score_dir  = IST_DIR / f"scores{lang_suffix}"
+        score_dir  = IST_DIR / "scores" / ("zh" if lang == "zh" else lang)
         report_dir = IST_DIR / f"reports{lang_suffix}"
     report_dir.mkdir(parents=True, exist_ok=True)
     return score_dir, report_dir

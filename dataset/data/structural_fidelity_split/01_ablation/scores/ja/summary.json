@@ -1,221 +1,221 @@
 {
-  "generated": "2026-04-03T00:52:26.159148",
+  "generated": "2026-04-03T15:02:49.122043",
   "rows": [
     {
       "domain": "business",
       "removed_dim": "FULL",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 4.9,
-      "mean_icmw": 0.15,
-      "mean_ds": null
-    },
-    {
-      "domain": "business",
-      "removed_dim": "how_feel",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 5,
-      "mean_icmw": 0.1525,
-      "mean_ds": 1
-    },
-    {
-      "domain": "business",
-      "removed_dim": "how_much",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 5,
-      "mean_icmw": 0.0825,
-      "mean_ds": 0.95
-    },
-    {
-      "domain": "business",
-      "removed_dim": "how_to_do",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 4.9,
-      "mean_icmw": 0.1875,
-      "mean_ds": 0.9
-    },
-    {
-      "domain": "business",
-      "removed_dim": "when",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 5,
-      "mean_icmw": 0.2325,
-      "mean_ds": 1
-    },
-    {
-      "domain": "business",
-      "removed_dim": "where",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 5,
-      "mean_icmw": 0.175,
-      "mean_ds": 0.3
-    },
-    {
-      "domain": "business",
-      "removed_dim": "who",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 4.9,
-      "mean_icmw": 0.13,
-      "mean_ds": 1
-    },
-    {
-      "domain": "business",
-      "removed_dim": "why",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 5,
-      "mean_icmw": 0.14,
-      "mean_ds": 0.1
-    },
-    {
-      "domain": "technical",
-      "removed_dim": "FULL",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 4.9,
-      "mean_icmw": 0.39,
-      "mean_ds": null
-    },
-    {
-      "domain": "technical",
-      "removed_dim": "how_feel",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 5,
-      "mean_icmw": 0.4725,
-      "mean_ds": 1
-    },
-    {
-      "domain": "technical",
-      "removed_dim": "how_much",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 5,
-      "mean_icmw": 0.26,
-      "mean_ds": 1
-    },
-    {
-      "domain": "technical",
-      "removed_dim": "how_to_do",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 4.9,
-      "mean_icmw": 0.4775,
-      "mean_ds": 0.3
-    },
-    {
-      "domain": "technical",
-      "removed_dim": "when",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 4.9,
-      "mean_icmw": 0.3825,
-      "mean_ds": 0.7
-    },
-    {
-      "domain": "technical",
-      "removed_dim": "where",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 4.9,
-      "mean_icmw": 0.2525,
-      "mean_ds": 0.8
-    },
-    {
-      "domain": "technical",
-      "removed_dim": "who",
-      "model": "gpt4o",
-      "n": 10,
-      "mean_ga": 4.9,
-      "mean_icmw": 0.29,
-      "mean_ds": 0.2
-    },
-    {
-      "domain": "technical",
-      "removed_dim": "why",
-      "model": "gpt4o",
-      "n": 10,
+      "model": "gemini",
+      "n": 6,
       "mean_ga": 5,
       "mean_icmw": 0.475,
+      "mean_ds": null
+    },
+    {
+      "domain": "business",
+      "removed_dim": "how_feel",
+      "model": "gemini",
+      "n": 6,
+      "mean_ga": 5,
+      "mean_icmw": 0.8,
       "mean_ds": 1
+    },
+    {
+      "domain": "business",
+      "removed_dim": "how_much",
+      "model": "gemini",
+      "n": 5,
+      "mean_ga": 5,
+      "mean_icmw": 0.685,
+      "mean_ds": 1
+    },
+    {
+      "domain": "business",
+      "removed_dim": "how_to_do",
+      "model": "gemini",
+      "n": 4,
+      "mean_ga": 5,
+      "mean_icmw": 0.6687,
+      "mean_ds": 0.75
+    },
+    {
+      "domain": "business",
+      "removed_dim": "when",
+      "model": "gemini",
+      "n": 6,
+      "mean_ga": 5,
+      "mean_icmw": 0.6083,
+      "mean_ds": 1
+    },
+    {
+      "domain": "business",
+      "removed_dim": "where",
+      "model": "gemini",
+      "n": 3,
+      "mean_ga": 5,
+      "mean_icmw": 0.85,
+      "mean_ds": 0
+    },
+    {
+      "domain": "business",
+      "removed_dim": "who",
+      "model": "gemini",
+      "n": 3,
+      "mean_ga": 5,
+      "mean_icmw": 0.85,
+      "mean_ds": 1
+    },
+    {
+      "domain": "business",
+      "removed_dim": "why",
+      "model": "gemini",
+      "n": 2,
+      "mean_ga": 5,
+      "mean_icmw": 0.425,
+      "mean_ds": 0
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "FULL",
+      "model": "gemini",
+      "n": 4,
+      "mean_ga": 5,
+      "mean_icmw": 0.5062,
+      "mean_ds": null
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "how_feel",
+      "model": "gemini",
+      "n": 5,
+      "mean_ga": 5,
+      "mean_icmw": 0.64,
+      "mean_ds": 0.8
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "how_much",
+      "model": "gemini",
+      "n": 7,
+      "mean_ga": 5,
+      "mean_icmw": 0.8107,
+      "mean_ds": 0.8571
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "how_to_do",
+      "model": "gemini",
+      "n": 7,
+      "mean_ga": 5,
+      "mean_icmw": 0.6536,
+      "mean_ds": 0.2857
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "when",
+      "model": "gemini",
+      "n": 7,
+      "mean_ga": 5,
+      "mean_icmw": 0.4393,
+      "mean_ds": 0.2857
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "where",
+      "model": "gemini",
+      "n": 5,
+      "mean_ga": 5,
+      "mean_icmw": 0.69,
+      "mean_ds": 0.8
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "who",
+      "model": "gemini",
+      "n": 6,
+      "mean_ga": 5,
+      "mean_icmw": 0.6042,
+      "mean_ds": 0
+    },
+    {
+      "domain": "technical",
+      "removed_dim": "why",
+      "model": "gemini",
+      "n": 4,
+      "mean_ga": 5,
+      "mean_icmw": 0.6375,
+      "mean_ds": 0.75
     },
     {
       "domain": "travel",
       "removed_dim": "FULL",
-      "model": "gpt4o",
-      "n": 10,
+      "model": "gemini",
+      "n": 6,
       "mean_ga": 5,
-      "mean_icmw": 0.74,
+      "mean_icmw": 0.8583,
       "mean_ds": null
     },
     {
       "domain": "travel",
       "removed_dim": "how_feel",
-      "model": "gpt4o",
-      "n": 10,
+      "model": "gemini",
+      "n": 5,
       "mean_ga": 5,
-      "mean_icmw": 0.6925,
-      "mean_ds": 0.15
+      "mean_icmw": 0.945,
+      "mean_ds": 0
     },
     {
       "domain": "travel",
       "removed_dim": "how_much",
-      "model": "gpt4o",
-      "n": 10,
+      "model": "gemini",
+      "n": 4,
       "mean_ga": 5,
-      "mean_icmw": 0.74,
-      "mean_ds": 0.8
+      "mean_icmw": 0.925,
+      "mean_ds": 1
     },
     {
       "domain": "travel",
       "removed_dim": "how_to_do",
-      "model": "gpt4o",
-      "n": 10,
+      "model": "gemini",
+      "n": 4,
       "mean_ga": 5,
-      "mean_icmw": 0.8325,
-      "mean_ds": 0.1
+      "mean_icmw": 0.9187,
+      "mean_ds": 0
     },
     {
       "domain": "travel",
       "removed_dim": "when",
-      "model": "gpt4o",
-      "n": 10,
+      "model": "gemini",
+      "n": 6,
       "mean_ga": 5,
-      "mean_icmw": 0.7825,
-      "mean_ds": 0.5
+      "mean_icmw": 0.85,
+      "mean_ds": 0.3333
     },
     {
       "domain": "travel",
       "removed_dim": "where",
-      "model": "gpt4o",
-      "n": 10,
+      "model": "gemini",
+      "n": 8,
       "mean_ga": 5,
-      "mean_icmw": 0.6475,
+      "mean_icmw": 0.8219,
       "mean_ds": 0
     },
     {
       "domain": "travel",
       "removed_dim": "who",
-      "model": "gpt4o",
-      "n": 10,
+      "model": "gemini",
+      "n": 5,
       "mean_ga": 5,
-      "mean_icmw": 0.77,
+      "mean_icmw": 0.855,
       "mean_ds": 1
     },
     {
       "domain": "travel",
       "removed_dim": "why",
-      "model": "gpt4o",
-      "n": 10,
+      "model": "gemini",
+      "n": 3,
       "mean_ga": 5,
-      "mean_icmw": 0.7375,
-      "mean_ds": 0.8
+      "mean_icmw": 0.9167,
+      "mean_ds": 0.6667
     }
   ]
 }
