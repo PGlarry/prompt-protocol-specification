@@ -2,7 +2,7 @@
 
 **Generated:** 2026-05-01  
 **Dataset:** N=60 samples (A-person + B-person vs LLM judge)  
-**Purpose:** Independent validation of LLM judge reliability for Paper 5 (NMI submission)
+**Purpose:** Independent validation of LLM judge reliability for the structural-fidelity split study
 
 ---
 
@@ -101,7 +101,7 @@ This dissociation is the **core validation finding**:
 
 ---
 
-## 6. Zone-Level Analysis (Critical for Paper 5)
+## 6. Zone-Level Analysis (Core Evidence)
 
 | Zone          |   N |   Human_A GA |   Human_B GA |   Avg GA |   LLM GA |   Δ(Avg−LLM) |   A ICMw |   B ICMw |   LLM ICMw |
 |:--------------|----:|-------------:|-------------:|---------:|---------:|-------------:|---------:|---------:|-----------:|
@@ -115,7 +115,7 @@ This dissociation is the **core validation finding**:
 - Human average GA in split zone: **3.120** (vs LLM=5.0, Δ=-1.880)
 - Human ICMw in split zone: **0.598** vs LLM ICMw: **0.702** (Δ=-0.104)
 
-**Interpretation for Paper 5:**  
+**Interpretation:**  
 Human raters independently assigned substantially lower holistic scores to split-zone outputs (mean GA = 3.12 vs LLM GA = 5.0), confirming that these outputs are genuinely lower quality than the LLM judge reports. This rules out the alternative hypothesis that the split zone reflects LLM judge error rather than real intent-level deficits.
 
 ---
@@ -167,10 +167,10 @@ Per-dimension comparisons show that dimensional scores are generally aligned bet
 
 ---
 
-## 10. Summary for Paper 5 (NMI)
+## 10. Summary
 
-| Finding | Value | Paper 5 Role |
-|---------|-------|-------------|
+| Finding | Value | Role |
+|---------|-------|------|
 | ICMw inter-rater ρ (A vs B) | 0.478 (p<0.001) | Dimensional metric moderate reliability |
 | GA Cohen's κ (A vs B) | 0.006 | Holistic score near-zero reliability |
 | ICMw (A+B avg vs LLM) ρ | **0.695** (p<0.001) | **Core validation: ICMw is reliable** |
@@ -179,7 +179,7 @@ Per-dimension comparisons show that dimensional scores are generally aligned bet
 | B learning effect (GA Δ) | +0.267 | Acknowledged; direction consistent with calibration |
 
 ### Methodological conclusion:
-> The human evaluation provides two independent validations critical for Paper 5:
+> The human evaluation provides two independent validations:
 > 1. **The dimensional metric (ICMw) is reliable** (ρ=0.695 with human judgment), justifying its use as the primary evaluation instrument.
 > 2. **The split zone represents genuine quality deficits** (human GA=3.12 vs LLM GA=5.0), ruling out the alternative that the structural-fidelity split is an artifact of LLM judge inflation.
-> 3. **Holistic scoring (GA) is inherently unreliable** (inter-rater κ≈0, human-LLM ρ not significant), substantiating the paper's critique of holistic evaluation paradigms.
+> 3. **Holistic scoring (GA) is inherently unreliable** (inter-rater κ≈0, human-LLM ρ not significant), substantiating the critique of holistic evaluation paradigms.

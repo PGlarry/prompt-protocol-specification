@@ -314,7 +314,7 @@ def write_report(results, cells, threshold, out_md):
 
     # IST interpretation
     A("## 6. IST Interpretation\n")
-    A("### Pub/Priv Decomposition Connects to Paper 4 v1/v2 Split\n")
+    A("### Pub/Priv Decomposition: s-ICMw (structural) vs f-ICMw (fidelity) Split\n")
     A("- **s-ICMw (v1)** measures structural recovery — the model fills the placeholder regardless of content")
     A("- **f-ICMw (v2)** measures content fidelity — the model must recover the *specific* user intent")
     A("- Public dimensions: model recovers from training priors → high v2 score")

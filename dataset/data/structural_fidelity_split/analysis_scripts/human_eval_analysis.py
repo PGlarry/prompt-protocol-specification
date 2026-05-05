@@ -314,7 +314,7 @@ W = lines.append
 W("# Human Evaluation Analysis Report")
 W(f"\n**Generated:** 2026-05-01  ")
 W(f"**Dataset:** N={N} samples (A-person + B-person vs LLM judge)  ")
-W(f"**Purpose:** Independent validation of LLM judge reliability for Paper 5 (NMI submission)\n")
+W(f"**Purpose:** Independent validation of LLM judge reliability for the structural-fidelity split study\n")
 W("---\n")
 
 W("## 1. Overview")
@@ -380,14 +380,14 @@ W("> *LLM ICMw (dimensional) reliably tracks human assessment (ρ=0.695); "
   "the metric that misses the blind spot (GA) is the unreliable one.*")
 
 W("\n---\n")
-W("## 6. Zone-Level Analysis (Critical for Paper 5)\n")
+W("## 6. Zone-Level Analysis (Core Evidence)\n")
 W(df2md(zone))
 
 W(f"\n### Split zone (N={len(split_df)}) — the core evidence:")
 W(f"- LLM assigned GA=5 to all {len(split_df)} split samples by design (selection criterion)")
 W(f"- Human average GA in split zone: **{human_ga_split:.3f}** (vs LLM=5.0, Δ={human_ga_split-5.0:.3f})")
 W(f"- Human ICMw in split zone: **{human_icm_split:.3f}** vs LLM ICMw: **{llm_icm_split:.3f}** (Δ={human_icm_split-llm_icm_split:.3f})")
-W("\n**Interpretation for Paper 5:**  ")
+W("\n**Interpretation:**  ")
 W("Human raters independently assigned substantially lower holistic scores to split-zone outputs "
   f"(mean GA = {human_ga_split:.2f} vs LLM GA = 5.0), confirming that these outputs are genuinely "
   "lower quality than the LLM judge reports. This rules out the alternative hypothesis that the "
@@ -435,9 +435,9 @@ W("Per-dimension comparisons show that dimensional scores are generally aligned 
   "subjectivity of those dimensions.")
 
 W("\n---\n")
-W("## 10. Summary for Paper 5 (NMI)\n")
-W("| Finding | Value | Paper 5 Role |")
-W("|---------|-------|-------------|")
+W("## 10. Summary\n")
+W("| Finding | Value | Role |")
+W("|---------|-------|------|")
 W(f"| ICMw inter-rater ρ (A vs B) | {r_icm_ab:.3f} ({fmtp(p_icm_ab)}) | Dimensional metric moderate reliability |")
 W(f"| GA Cohen's κ (A vs B) | {k_ga:.3f} | Holistic score near-zero reliability |")
 W(f"| ICMw (A+B avg vs LLM) ρ | **{r_avg_icm:.3f}** ({fmtp(p_avg_icm)}) | **Core validation: ICMw is reliable** |")
@@ -446,7 +446,7 @@ W(f"| Split zone: human avg GA | **{human_ga_split:.3f}** vs LLM=5.0 | **Split z
 W(f"| B learning effect (GA Δ) | {learn['B_后30_GA']-learn['B_前30_GA']:+.3f} | Acknowledged; direction consistent with calibration |")
 
 W("\n### Methodological conclusion:")
-W("> The human evaluation provides two independent validations critical for Paper 5:")
+W("> The human evaluation provides two independent validations supporting the study conclusions:")
 W("> 1. **The dimensional metric (ICMw) is reliable** (ρ=0.695 with human judgment), "
   "justifying its use as the primary evaluation instrument.")
 W("> 2. **The split zone represents genuine quality deficits** (human GA=3.12 vs LLM GA=5.0), "

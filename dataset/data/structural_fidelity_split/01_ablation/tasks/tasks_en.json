@@ -3,7 +3,7 @@
   "version": "1.0",
   "lang": "en",
   "source": "paper3_condition_c",
-  "theory": "Task-Conditioned Dimensional Weighting Principle (IST Paper 4)",
+  "theory": "Task-Conditioned Dimensional Weighting Principle (PPS-IST v1.0)",
   "prior_weights": {
     "travel": {
       "what": 0.2,

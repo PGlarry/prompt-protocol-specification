@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Experiment:** Independent external proxy annotation of public/private inferability  
-**Purpose:** Address potential circularity in recovery-based pub/priv classification (Paper 5 / NMI)  
+**Purpose:** Address potential circularity in recovery-based pub/priv classification for the structural-fidelity split study  
 **Protocol:** B+ (GPT-4o + Claude-Sonnet, blinded, two-model merge)
 
 ---
@@ -11,7 +11,7 @@
 
 ### 1.1 Background
 
-The recovery-based public/private classification in Paper 5 uses an f-ICMw ≥ 0.7 threshold on ablated outputs to classify each task × dimension cell: if removing a dimension still yields high-fidelity output, the dimension is labeled "public" (model can infer it); otherwise "private." A reviewer might argue this is circular because the labeling depends on the model's own recovery behavior.
+The recovery-based public/private classification in this study uses an f-ICMw ≥ 0.7 threshold on ablated outputs to classify each task × dimension cell: if removing a dimension still yields high-fidelity output, the dimension is labeled "public" (model can infer it); otherwise "private." A reviewer might argue this is circular because the labeling depends on the model's own recovery behavior.
 
 To address this, we conducted an **external proxy annotation study**: two frontier LLMs were asked to judge whether each dimension's gold content could be independently inferred from the task title, goal, and domain conventions alone — with **no access to model outputs, experimental labels, or other dimensions' content**.
 
@@ -236,7 +236,7 @@ This explains why:
 - travel|where: recovery=82% (any destination works) but proxy=10% (specific destination not inferable)
 - technical|when: recovery=1% (specific timing rarely matched) but proxy=40% (pre-deployment/maintenance timing IS conventionally inferable)
 
-### 6.4 Implication for Paper 5
+### 6.4 Theoretical Implication
 
 This distinction is **not a failure of the proxy annotation — it is a theoretical contribution**. It suggests that:
 
@@ -248,7 +248,7 @@ This distinction is **not a failure of the proxy annotation — it is a theoreti
 
 ---
 
-## 7. Summary and Paper 5 Recommendations
+## 7. Summary and Recommendations
 
 ### 7.1 What the Proxy Annotation Establishes
 

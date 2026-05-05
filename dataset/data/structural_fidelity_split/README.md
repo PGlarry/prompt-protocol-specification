@@ -31,15 +31,18 @@ structural_fidelity_split/
 
 - **Design**: 30 tasks × 3 domains × 8 conditions (FULL + 7 single-dimension ablations)
   × 6 models (ZH) / 3 models (EN, JA) = 2,880 outputs evaluated
-- **Models**: Claude Sonnet 4 (`claude-sonnet-4-20250514`), GPT-4o (`gpt-4o`),
-  DeepSeek-V3 (`deepseek-chat`), Qwen-Max (`qwen-max`),
-  Gemini 2.5 Pro (`gemini-2.5-pro`), Kimi (`moonshot-v1-32k`)
+- **Two-phase model coverage**:
+  - Phase 1 — ZH only (confirmatory pilot): DeepSeek-V3 (`deepseek-chat`),
+    Qwen-Max (`qwen-max`), Kimi (`moonshot-v1-32k`)
+  - Phase 2 — ZH + EN + JA (cross-linguistic validation): Claude Sonnet 4
+    (`claude-sonnet-4-20250514`), GPT-4o (`gpt-4o`), Gemini 2.5 Pro (`gemini-2.5-pro`)
+  - ZH combines both phases (6 models); EN and JA use Phase 2 models only (3 models each)
 - **Metrics**: GA (holistic, 1–5), f-ICMw (dimensional fidelity), s-ICMw (structural coverage)
 - **Key finding**: 25.7% ZH / 58.6% EN outputs score GA=5 with measurable dimensional deficits
 
 | File | Description |
 |---|---|
-| `tasks/tasks_zh.json` | 30 tasks used for ZH experiment |
+| `tasks/tasks.json` | 30 task definitions used for the ablation experiment (ZH prompt set) |
 | `tasks/tasks_en.json` | Tasks for EN subset |
 | `tasks/tasks_ja.json` | Tasks for JA subset |
 | `data/ablation_zh.jsonl` | All ZH outputs with GA + f-ICMw scores (1,440 records) |
@@ -120,9 +123,18 @@ python analysis_scripts/pub_priv_analysis.py
 
 ## Relationship to Prior Work
 
-This dataset supersedes the separately released `paper4` dataset.
-Papers 1–3 data remains in `dataset/data/paper1/`, `paper2/`, `paper3/`
-respectively (corresponding to arXiv refs 2603.18976, 2603.25379, 2603.29953).
+This dataset was collected and analyzed for the paper above.
+Three earlier preprints introduced and evaluated the 5W3H/PPS prompting
+framework at the condition-comparison level:
+
+- arXiv:2603.18976 — initial 5W3H framework and prompting protocol
+- arXiv:2603.25379 — cross-model condition evaluation
+- arXiv:2603.29953 — extended framework evaluation
+
+The present dataset is distinct: it introduces the structural-fidelity split
+analysis, f-ICMw fidelity scoring, public–private decomposition, independent
+human validation, proxy inferability annotation, and weight-perturbation
+experiments. None of those analyses appear in the earlier preprints.
 
 ---
 

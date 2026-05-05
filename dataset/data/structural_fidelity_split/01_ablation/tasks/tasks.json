@@ -1,7 +1,7 @@
 {
   "description": "IST Validation Experiment 1: Single-Dimension Ablation",
   "version": "1.0",
-  "theory": "Task-Conditioned Dimensional Weighting Principle (IST Paper 4)",
+  "theory": "Task-Conditioned Dimensional Weighting Principle (PPS-IST v1.0)",
   "prior_weights": {
     "travel": {
       "what": 0.20,
