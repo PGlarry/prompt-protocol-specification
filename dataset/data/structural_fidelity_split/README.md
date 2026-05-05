@@ -38,7 +38,7 @@ structural_fidelity_split/
     (`claude-sonnet-4-20250514`), GPT-4o (`gpt-4o`), Gemini 2.5 Pro (`gemini-2.5-pro`)
   - ZH combines both phases (6 models); EN and JA use Phase 2 models only (3 models each)
 - **Metrics**: GA (holistic, 1–5), f-ICMw (dimensional fidelity), s-ICMw (structural coverage)
-- **Key finding**: 25.7% ZH / 58.6% EN outputs score GA=5 with measurable dimensional deficits
+- **Key finding**: Among records with complete paired GA and f-ICMw scores, 25.7% of ZH and 58.6% of EN records scored GA=5 while exhibiting measurable dimensional deficits
 
 | File | Description |
 |---|---|
@@ -83,8 +83,9 @@ structural_fidelity_split/
 
 ### 04 · Weight-Perturbation Experiment (§2.4, Methods §4.6)
 
-- **Design**: 2 domains × 3 models × 4 weight conditions (matched/uniform/perturbed/mismatched)
-  × 10 tasks/domain = 240 outputs, dual-judge scored (v3_clean leakage-audited subset)
+- **Design**: Two rounds. v2: 2 domains × 3 models × 4 weight conditions
+  (matched/uniform/perturbed/mismatched) × 10 tasks/domain = 240 outputs.
+  v3_clean: leakage-audited subset with dual-judge verification, 120 outputs
 - **Models**: DeepSeek-V3, Qwen-Max, Kimi
 - **Key finding**: Plateau-cliff structure — moderate misalignment absorbed; severe inversion
   consistently degrades WAS across 100% of domain × model cells
